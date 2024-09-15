@@ -1,4 +1,5 @@
-ZestISO is a set of scripts and presets to easily customise, build and install Arch Linux.
+# ZestISO
+ZestISO is a collection of tools to help create your own free Arch Linux based operating system. You can install it on as many devices as you want, and each one will be set-up and ready to go with your favourite software and settings.
 
 The official Arch Linux releases are built with archiso, so this is what I am using for ZestISO. Archiso reads a custom profile (preset) and builds the ISO (the Arch Linux boot/install media).
 You can specify what software/services you want to include, system configuration and first-boot setup, ISO info/build options and more.
