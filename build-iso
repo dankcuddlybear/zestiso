@@ -1,0 +1,5 @@
+#!/bin/sh
+sudo rm -rf out /tmp/archiso-tmp > /dev/null
+sudo mkarchiso -v -w /tmp/archiso-tmp ./archiso && \
+sudo chown -R $(whoami):$(whoami) out && \
+(cd out; mv *.iso ../; cd ../; rm -rf out) &> /dev/null
