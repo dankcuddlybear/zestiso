@@ -5,3 +5,5 @@ You can specify what software/services you want to include, system configuration
 ArchISO has a few limitations however:
  - The only supported boot loaders are Syslinux for legacy BIOS systems, and GRUB or Systemd-boot for modern UEFI systems.
  - ArchISO only supports booting an initramfs created with mkinitcpio using udev (busybox) init system. Systemd init and Dracut/Booster are not supported.
+
+In the ZestISO software repositories, you'll find custom software packages and bundles to help you quickly and easily install and configure software and services. You can install the Networking, Printing or a graphical desktop environment package, for example. Each package includes all the necessary components required for use, and when installed, will set up everything for you. There is no need to do anything manually, just install the package and you're done.
