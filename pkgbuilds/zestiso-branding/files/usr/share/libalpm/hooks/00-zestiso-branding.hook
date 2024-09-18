@@ -1,0 +1,11 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = filesystem
+Target = zestiso-branding
+
+[Action]
+Description = Updating OS info...
+When = PostTransaction
+Exec = /usr/bin/cp /usr/share/zestiso/configs/os-release /usr/lib/os-release
