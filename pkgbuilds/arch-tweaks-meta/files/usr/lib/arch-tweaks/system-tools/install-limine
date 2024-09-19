@@ -11,13 +11,13 @@ RootCheck() {
 Help() {
 	echo "Usage: $(basename $0) <install|upgrade|uninstall>"
 	echo " install:   Install Limine on your boot disk"
-	echo "            and create a new configuration file at /boot/limine/limine.cfg"
+	echo "            and create a new configuration file at /boot/limine/limine.conf"
 	echo "            To avoid overwriting your configuration,"
-	echo "            please save it at /boot/limine.cfg instead"
+	echo "            please save it at /boot/limine.conf instead"
 	echo " upgrade:   Upgrade Limine to the latest version on your boot disk"
 	echo "            without overwriting your configuration file"
-	echo " uninstall: Remove Limine and all limine.cfg files from your /boot partition"
-	echo "            Make sure you back up your limine.cfg file"
+	echo " uninstall: Remove Limine and all limine.conf files from your /boot partition"
+	echo "            Make sure you back up your limine.conf file"
 	echo "            if you want to use it in the future"
 	exit 0
 }
@@ -91,11 +91,9 @@ case "$1" in
 		ROOT_DEV="$(cat /etc/fstab | grep -m 1 " / \|	/ \| /	\|	/	" | cut -d ' ' -f 1 | cut -d '	' -f 1)"
 		[ -z "$ROOT_DEV" ] && Error "No root (/) partition specified in /etc/fstab"
 		## Configure Limine
-		KPARAMS="rw root=$ROOT_DEV $(cat /usr/share/arch-tweaks/custom-configs/limine/limine.cfg | grep -m 1 "\${KPARAMS}=" | cut -b12-)"
-		[ -f /boot/intel-ucode.img ] && KPARAMS="$KPARAMS intel_iommu=on"
 		cp -r /usr/share/arch-tweaks/custom-configs/limine /boot # Copy bootloader config files and resources
-		sed -i "s/^.*\${KPARAMS}=.*$/\${KPARAMS}=${KPARAMS}/" /boot/limine/limine.cfg
-		sed -i "s/^.*\${KERNEL}=.*$/\${KERNEL}=$KERNEL/" /boot/limine/limine.cfg
+		sed -i "s/^.*\${KERNEL}=.*$/\${KERNEL}=$KERNEL/" /boot/limine/limine.conf
+		sed -i "s/^.*\${ROOT}=.*$/\${ROOT}=$ROOT_DEV/" /boot/limine/limine.conf
 		## Create UEFI boot entry
 		if [ ! -z "$EFI_BITS" ]; then
 			[ "$EFI_BITS" == 32 ] && efibootmgr -c -d $BOOT_DISK -p $BOOT_PARTNO -L "Limine" -l '\EFI\Limine\BOOTIA32.EFI'
@@ -103,18 +101,18 @@ case "$1" in
 		fi
 		echo "Installed Limine boot loader successfully.";;
 	upgrade)
-		## If limine.cfg is not found in /boot, exit gracefully
-		if [ ! -f /boot/limine.cfg ] && [ ! -f /boot/limine/limine.cfg ] && \
-		[ ! -f /boot/boot/limine.cfg ] && [ ! -f /boot/boot/limine/limine.cfg ] && \
-		[ ! -f /boot/EFI/boot/limine.cfg ]; then
-		echo "limine.cfg not found in /boot, skipping install"; exit 0; fi
+		## If limine.conf is not found in /boot, exit gracefully
+		if [ ! -f /boot/limine.conf ] && [ ! -f /boot/limine/limine.conf ] && \
+		[ ! -f /boot/boot/limine.conf ] && [ ! -f /boot/boot/limine/limine.conf ] && \
+		[ ! -f /boot/EFI/boot/limine.conf ]; then
+		echo "limine.conf not found in /boot, skipping install"; exit 0; fi
 		echo "Upgrading Limine bootloader..."
 		Upgrade && \
 		echo "Upgraded Limine boot loader successfully."
 		;;
 	uninstall)
-		rm -rf /boot/EFI/limine /boot/limine /boot/limine.cfg
-		echo "Limine has been removed from your /boot partition";;
+		rm -rf /boot/EFI/limine /boot/limine /boot/limine.conf
+		echo "Limine has been removed from your computer";;
 	help|--help|-h) Help;;
 	*) Error "Unrecognised command \"$1\"";;
 esac
