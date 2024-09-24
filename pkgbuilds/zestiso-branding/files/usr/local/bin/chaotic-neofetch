@@ -1,0 +1,2 @@
+#!/bin/sh
+/usr/bin/chaotic-neofetch --source /usr/share/pixmaps/zestiso-logo.png "$@"

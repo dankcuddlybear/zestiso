@@ -1,2 +1,2 @@
 #!/bin/sh
-/usr/bin/neofetch --ascii /home/am/Documents/Code/zestiso/pkgbuilds/zestiso-branding/files/usr/share/zestiso/neofetch.ascii --ascii_colors 15 3 2 3 4 5 "$@"
+/usr/bin/neofetch --ascii /usr/share/zestiso/neofetch.ascii --ascii_colors 15 3 2 3 4 5 "$@"

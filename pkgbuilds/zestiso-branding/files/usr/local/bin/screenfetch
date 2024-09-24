@@ -1,0 +1,2 @@
+#!/bin/sh
+/usr/bin/screenfetch --ascii /usr/share/zestiso/screenfetch.ascii "$@"
