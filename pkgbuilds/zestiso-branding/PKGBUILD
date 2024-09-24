@@ -9,4 +9,6 @@ install=install.install
 package() {
 	cp -r "$srcdir/../files/usr" "$pkgdir"
 	"$srcdir/../../set-default-permissions.sh" "$pkgdir"
+	CDIR="$(pwd)"
+	cd "$pkgdir/usr/local/bin"; chmod +x *; cd "$CDIR"
 }

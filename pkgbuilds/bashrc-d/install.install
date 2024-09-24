@@ -1,0 +1,3 @@
+pre_remove() {
+	cp /usr/share/zestiso/configs/backup/os-release /usr/lib/os-release
+}

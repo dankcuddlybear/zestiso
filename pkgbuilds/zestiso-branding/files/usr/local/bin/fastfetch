@@ -1,0 +1,2 @@
+#!/bin/sh
+/usr/bin/fastfetch --logo /usr/share/zestiso/fastfetch.ascii --logo-color-1 light_white --logo-color-2 light_yellow "$@"

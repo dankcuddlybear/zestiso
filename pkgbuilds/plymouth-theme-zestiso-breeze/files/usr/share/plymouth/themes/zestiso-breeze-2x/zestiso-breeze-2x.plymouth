@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=ZestISO Breeze 2x
+Description=ZestISO theme insired by KDE Breeze (2x scaled for HiDPI)
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/zestiso-breeze-2x
+ScriptFile=/usr/share/plymouth/themes/zestiso-breeze-2x/script

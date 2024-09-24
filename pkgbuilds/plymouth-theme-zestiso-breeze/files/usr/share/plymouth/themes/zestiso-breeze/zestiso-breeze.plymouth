@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=ZestISO Breeze
+Description=ZestISO theme insired by KDE Breeze
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/zestiso-breeze
+ScriptFile=/usr/share/plymouth/themes/zestiso-breeze/script

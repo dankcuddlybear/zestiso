@@ -1,0 +1,9 @@
+[Trigger]
+Operation = Upgrade
+Type = Package
+Target = bash
+
+[Action]
+Description = Updating default bashrc...
+When = PostTransaction
+Exec = /usr/share/libalpm/hooks/bashrc-d-upgrade
