@@ -1,3 +1,6 @@
+post_install() {
+	cp -r /usr/share/zestiso/limine /boot/
+}
 pre_remove() {
 	cp /usr/share/zestiso/configs/backup/os-release /usr/lib/os-release
 }
