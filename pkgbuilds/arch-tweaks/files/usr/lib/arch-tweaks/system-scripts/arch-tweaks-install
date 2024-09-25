@@ -1,0 +1,4 @@
+#!/bin/sh
+printf "Enabling important services..."
+systemctl --now enable fstrim.timer systemd-timesyncd arch-tweaks-hwsetup
+printf " Done.\n"

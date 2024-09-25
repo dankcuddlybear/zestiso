@@ -1,9 +1,0 @@
-[Trigger]
-Type = Package
-Operation = Install
-Target = kde-core-meta
-
-[Action]
-Description = Configuring KDE Plasma and SDDM
-When = PostTransaction
-Exec = /usr/share/libalpm/scripts/kde-core-meta-install

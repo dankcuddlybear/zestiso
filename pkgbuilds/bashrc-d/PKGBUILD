@@ -5,6 +5,7 @@ pkgrel=$(expr $(date +%-S) + $(expr 60 \* $(date +%-M)) + $(expr 3600 \* $(date 
 pkgdesc='Set up bash to use drop-in config files in /etc/bashrc.d instead of the single file /etc/bash.bashrc'
 arch=(any)
 url='https://github.com/dankcuddlybear/zestiso'
+depends=(bash)
 package() {
 	cp -r "$srcdir/../files/usr" "$pkgdir"
 	"$srcdir/../../set-default-permissions.sh" "$pkgdir"
