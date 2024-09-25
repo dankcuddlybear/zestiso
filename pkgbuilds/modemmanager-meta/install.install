@@ -1,0 +1,8 @@
+post_install() {
+	## Disable and block services that interfere with other network services
+	systemctl --now disable systemd-resolved systemd-networkd &> /dev/null
+	systemctl --now mask systemd-resolved systemd-networkd &> /dev/null
+	
+	## Enable ModemManager
+	systemctl --now enable ModemManager
+}

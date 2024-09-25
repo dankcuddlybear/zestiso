@@ -5,9 +5,14 @@ pkgrel=$(expr $(date +%-S) + $(expr 60 \* $(date +%-M)) + $(expr 3600 \* $(date 
 pkgdesc='Desktop libraries, utilities and services - all-in-one package'
 arch=(any)
 url='https://github.com/dankcuddlybear/zestiso'
-depends=(
-	android-udev
+depends=(android-udev
+	archives-meta
+	bluetooth-meta
 	game-devices-udev
+	linux-utilities-meta
+	modemmanager-meta
+	multimedia-codecs-meta
+	networking-meta
 	xdg-desktop-portal
 	xdg-user-dirs
 )

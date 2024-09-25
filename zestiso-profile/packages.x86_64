@@ -88,12 +88,12 @@ yay
 ## Uncomment packages for any other functionality you need
 arch-tweaks-meta
 archives-meta
-#bluetooth-meta
+bluetooth-meta
 desktop-addons-meta
 filesystems-meta
 linux-utilities-meta
 multimedia-codecs-meta
-#modemmanager-meta
+modemmanager-meta
 networking-meta
 printing-meta
 #samba-meta
