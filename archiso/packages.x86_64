@@ -24,19 +24,31 @@ octopi
 qbittorrent
 vlc
 
+## ZestISO all-in-one software bundles
+bundle-filesystems
+bundle-wine
+#bundle-archives
+#bundle-bluetooth
+#bundle-cli-utils
+#bundle-desktop
+#bundle-gvfs
+#bundle-media-codecs
+#bundle-modemmanager
+#bundle-networking
+#bundle-printing
+
 ## GPU drivers
-amd-gpu-meta
-intel-gpu-meta
-nvidia-gpu-foss-meta
-#nvidia-gpu-pro-340xx-meta
-#nvidia-gpu-pro-390xx-meta
-#nvidia-gpu-pro-470xx-meta
-#nvidia-gpu-pro-525xx-meta
-#nvidia-gpu-pro-meta
+bundle-amd-gpu
+bundle-intel-gpu
+bundle-nvidia-foss
+#bundle-nvidia-pro
+#bundle-nvidia-pro-340xx
+#bundle-nvidia-pro-390xx
+#bundle-nvidia-pro-470xx
+#bundle-nvidia-pro-525xx
 
 ## Uncomment for Pipewire sound server
 pipewire-alsa
-pipewire-audio
 pipewire-jack
 pipewire-pulse
 pipewire-roc
@@ -45,8 +57,8 @@ pipewire-zeroconf
 wireplumber
 
 ## Uncomment for a basic desktop environment
-kde-core-meta
-#xfce-core-meta
+bundle-kde
+#bundle-xfce
 
 ## Uncomment for KDE applications
 ark
@@ -84,20 +96,6 @@ chaotic-keyring
 chaotic-mirrorlist
 git
 yay
-
-## Uncomment packages for any other functionality you need
-arch-tweaks-meta
-desktop-core-meta
-# archives-meta
-# bluetooth-meta
-# linux-utilities-meta
-# multimedia-codecs-meta
-# modemmanager-meta
-# networking-meta
-# printing-meta
-# samba-meta
-filesystems-meta
-wine-meta
 
 ## Installer (will be removed after installation)
 alci-calamares

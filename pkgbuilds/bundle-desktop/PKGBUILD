@@ -13,6 +13,7 @@ depends=(android-udev
 	bundle-modemmanager
 	bundle-media-codecs
 	bundle-networking
+	bundle-printing
 	dosfstools
 	exfatprogs
 	game-devices-udev

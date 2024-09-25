@@ -34,6 +34,9 @@ fi
 echo "Uninstalling unnecessary packages..."
 pacman --noconfirm -Rus $UNINSTALL_PKG &> /dev/null
 
+echo "Marking packages as dependencies..."
+pacman --asdeps -D bash iptables-nft libglvnd noto-fonts qt6-multimedia-gstreamer phonon-qt6-gstreamer-git wireplumber
+
 ## Enable sudo for wheel members
 echo "%wheel ALL=(ALL:ALL) ALL" > /etc/sudoers.d/g_wheel
 

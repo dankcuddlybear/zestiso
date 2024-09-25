@@ -121,13 +121,13 @@ navigation: widget
 # are visible as buttons there if the corresponding *show* keys
 # are set to "true" (they can also be overridden).
 strings:
-    productName:         Arch Linux
-    shortProductName:    Arch
+    productName:         ZestISO
+    shortProductName:    ZestISO
     version:             rolling
     shortVersion:        rolling
-    versionedName:       Arch Linux
-    shortVersionedName:  Arch Linux
-    bootloaderEntryName: Arch Linux
+    versionedName:       ZestISO
+    shortVersionedName:  ZestISO
+    bootloaderEntryName: ZestISO
 
 # These images are loaded from the branding module directory.
 #
