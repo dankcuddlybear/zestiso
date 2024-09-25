@@ -24,6 +24,16 @@ octopi
 qbittorrent
 vlc
 
+## GPU drivers
+amd-gpu-meta
+intel-gpu-meta
+nvidia-gpu-foss-meta
+#nvidia-gpu-pro-340xx-meta
+#nvidia-gpu-pro-390xx-meta
+#nvidia-gpu-pro-470xx-meta
+#nvidia-gpu-pro-525xx-meta
+#nvidia-gpu-pro-meta
+
 ## Uncomment this section for Pipewire sound server
 pipewire-alsa
 pipewire-audio
@@ -63,6 +73,11 @@ plasma-systemmonitor
 plasma-vault
 spectacle
 
+## Wallpapers and themes
+plymouth-theme-zestiso-breeze
+zestiso-branding
+zestiso-wallpapers
+
 ## Uncomment this section for compilers and extra software
 base-devel
 chaotic-keyring
@@ -73,14 +88,15 @@ yay
 ## Uncomment packages for any other functionality you need
 arch-tweaks-meta
 archives-meta
+#bluetooth-meta
 desktop-addons-meta
 filesystems-meta
-gpu-drivers-meta
-#gvfs-meta
 linux-utilities-meta
 multimedia-codecs-meta
+#modemmanager-meta
 networking-meta
 printing-meta
+#samba-meta
 wine-meta
 
 ## Installer (will be removed after installation)
