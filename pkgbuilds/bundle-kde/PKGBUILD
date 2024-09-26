@@ -50,6 +50,7 @@ depends=(bluedevil
 	sddm-kcm
 	sshfs
 	taglib
+	xdg-desktop-portal-gtk
 	xdg-desktop-portal-kde
 )
 package() {
