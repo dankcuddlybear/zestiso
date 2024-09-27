@@ -5,8 +5,10 @@ linux-zen-headers
 ## Custom defaults
 bash
 iptables-nft
+lib32-sdl12-compat
 libglvnd
 noto-fonts
+ntfs-3g
 qt6-multimedia-gstreamer
 phonon-qt6-gstreamer-git
 
@@ -18,24 +20,24 @@ testdisk
 
 ## Add your graphical applications here
 firefox-i18n-en-gb
-gparted
 libreoffice-fresh-en-gb
 octopi
-qbittorrent
 vlc
+#gparted
+#qbittorrent
 
 ## ZestISO all-in-one software bundles
 bundle-filesystems
 bundle-wine
-#bundle-archives
-#bundle-bluetooth
-#bundle-cli-utils
 #bundle-desktop
-#bundle-gvfs
-#bundle-media-codecs
-#bundle-modemmanager
-#bundle-networking
-#bundle-printing
+# bundle-archives
+# bundle-bluetooth
+# bundle-cli-utils
+# bundle-gvfs
+# bundle-media-codecs
+# bundle-modemmanager
+# bundle-networking
+# bundle-printing
 
 ## GPU drivers
 bundle-amd-gpu
@@ -48,6 +50,7 @@ bundle-nvidia-foss
 #bundle-nvidia-pro-525xx
 
 ## Uncomment for Pipewire sound server
+lib32-pipewire-jack
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
@@ -66,8 +69,11 @@ dolphin
 dolphin-plugins
 filelight
 gwenview
+isoimagewriter
+kalarm
 kamoso
 kate
+kbackup
 kcalc
 kcharselect
 kcolorchooser
@@ -75,15 +81,36 @@ kdeconnect
 kdepim-addons
 kdeplasma-addons
 kfind
+kgpg
 khelpcenter
+kmail
 kolourpaint
 konsole
+krecorder
+krename
+ktimer
+ktorrent
 kwalletmanager
 okteta
 okular
+partitionmanager
 plasma-systemmonitor
 plasma-vault
 spectacle
+sweeper
+yakuake
+
+## Minimal set of KDE games (about 52.25MiB install)
+khangman
+kblocks
+kbreakout
+kmahjongg
+kmines
+knights
+kpat
+ksudoku
+ktouch
+picmi
 
 ## Wallpapers and themes
 plymouth-theme-zestiso-breeze

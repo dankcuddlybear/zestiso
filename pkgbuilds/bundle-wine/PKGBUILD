@@ -6,8 +6,7 @@ pkgrel=$(expr $(date +%-S) + $(expr 60 \* $(date +%-M)) + $(expr 3600 \* $(date 
 pkgdesc='Windows applications and games compatibility - all-in-one bundle'
 arch=(x86_64)
 url='https://github.com/dankcuddlybear/zestiso'
-depends=(wine-gecko wine-mono wine-nine winesync-dkms winesync-header winesync-udev-rule winetricks
-	bundle-media-codecs
+depends=(bundle-media-codecs
 	dxvk-async-git
 	lib32-alsa-plugins
 	lib32-libavtp
@@ -33,6 +32,13 @@ depends=(wine-gecko wine-mono wine-nine winesync-dkms winesync-header winesync-u
 	lib32-sdl2_ttf
 	lib32-smpeg
 	vkd3d-proton-mingw-git
+	wine-gecko
+	wine-mono
+	wine-nine
+	#winesync-dkms
+	#winesync-header
+	#winesync-udev-rule
+	winetricks
 )
 package() {
 	cp -r "$srcdir/../files/etc" "$pkgdir"
