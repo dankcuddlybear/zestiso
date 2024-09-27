@@ -1,4 +1,3 @@
 #!/bin/sh
-sudo rm -rf out /tmp/zestiso-tmp
-sudo mkarchiso -v -w /tmp/zestiso-tmp ./zestiso-profile && \
+sudo mkarchiso -v archiso && \
 sudo chown -R $(whoami):$(whoami) out
