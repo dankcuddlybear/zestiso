@@ -7,4 +7,4 @@ Target = usr/share/wine/wine.inf
 [Action]
 Description = Stopping Wine from hijacking file associations...
 When = PostTransaction
-Exec = /usr/share/libalpm/scripts/wine-meta/stop-wine-associations
+Exec = /usr/share/libalpm/scripts/bundle-wine/stop-wine-associations

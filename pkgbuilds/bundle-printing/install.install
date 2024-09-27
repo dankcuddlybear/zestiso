@@ -7,5 +7,5 @@ post_install() {
 	systemctl --now mask systemd-resolved &> /dev/null
 	
 	## Enable print services
-	systemctl --now enable cups.socket cups-browsed ipp-usb saned.socket avahi-daemon &> /dev/null
+	systemctl --now enable cups.socket cups-browsed ipp-usb saned.socket avahi-daemon
 }

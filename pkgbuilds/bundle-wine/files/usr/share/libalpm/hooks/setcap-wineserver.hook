@@ -7,4 +7,4 @@ Target = usr/bin/wineserver
 [Action]
 Description = Stopping Wine from hijacking file associations...
 When = PostTransaction
-Exec = /usr/share/libalpm/scripts/wine-meta/setcap-wineserver
+Exec = /usr/share/libalpm/scripts/bundle-wine/setcap-wineserver

@@ -17,4 +17,3 @@ depends=(
 	vulkan-mesa-layers lib32-vulkan-mesa-layers
 	vulkan-nouveau lib32-vulkan-nouveau
 )
-install=install.install
