@@ -1,6 +1,7 @@
 #!/bin/sh
 ## Copy SDDM config
-cp -n /usr/share/KDE/kde-core-meta/custom-user-config/sddm.conf.d/*.conf /etc/sddm.conf.d/
+mkdir /etc/sddm.conf &> /dev/null
+cp -n /usr/share/KDE/bundle-kde/custom-user-config/sddm.conf.d/*.conf /etc/sddm.conf.d/
 
 ## If installed on a tablet or touch screen device,
 ## switch SDDM to X11 mode as virtual keyboard does not work on Walyand
