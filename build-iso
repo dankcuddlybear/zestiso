@@ -1,3 +1,10 @@
 #!/bin/sh
-sudo mkarchiso -v archiso && \
-sudo chown -R $(whoami):$(whoami) out
+MEM_MB_SIZE=$(free -m | grep "Mem:" | xargs | cut -d ' ' -f 2)
+if [ $MEM_MB_SIZE -ge 20480 ]; then
+	ARCHISO_WORK_DIR="/tmp/archiso-tmp"
+else ARCHISO_WORK_DIR="work"; fi
+sudo rm -rf out
+sudo mkarchiso -v -w "$ARCHISO_WORK_DIR" archiso && sync && \
+sudo chown -R $(whoami):$(whoami) out && cd out && mv *.iso ../ && \
+cd .. && rmdir out
+sync

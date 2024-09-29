@@ -2,14 +2,13 @@
 PowerProfile=balanced
 
 [AC][SuspendAndShutdown]
-LidAction=0
+AutoSuspendIdleTimeoutSec=1800
 PowerButtonAction=1
 
 [Battery][Performance]
 PowerProfile=power-saver
 
 [Battery][SuspendAndShutdown]
-LidAction=0
 PowerButtonAction=1
 
 [BatteryManagement]
@@ -23,5 +22,5 @@ UseProfileSpecificDisplayBrightness=false
 PowerProfile=power-saver
 
 [LowBattery][SuspendAndShutdown]
-LidAction=0
+InhibitLidActionWhenExternalMonitorPresent=false
 PowerButtonAction=1

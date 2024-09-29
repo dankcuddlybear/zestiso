@@ -1,6 +1,6 @@
 #!/bin/sh
 ## Copy SDDM config
-mkdir /etc/sddm.conf &> /dev/null
+mkdir /etc/sddm.conf.d &> /dev/null
 cp -n /usr/share/KDE/bundle-kde/custom-user-config/sddm.conf.d/*.conf /etc/sddm.conf.d/
 
 ## If installed on a tablet or touch screen device,

@@ -1,0 +1,7 @@
+[Daemon]
+Autolock=false
+Timeout=0
+
+[Greeter][Wallpaper][org.kde.image][General]
+Image=/usr/share/wallpapers/zestiso-wallpapers/01-oranges.jpg
+PreviewImage=/usr/share/wallpapers/zestiso-wallpapers/01-oranges.jpg

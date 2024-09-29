@@ -43,12 +43,11 @@ echo "%wheel ALL=(ALL:ALL) ALL" > /etc/sudoers.d/g_wheel
 ## Remove files needed only by ArchISO
 rm -rf /etc/polkit-1/rules.d/49-nopasswd_global.rules \
 /etc/sddm.conf.d/autologin.conf \
-/etc/ssh/sshd_config.d/10-archiso.conf \
 /etc/sudoers.d/g_wheel_nopasswd \
 /etc/systemd/system/getty@tty1.service.d \
 /etc/systemd/journald.conf.d/volatile-storage.conf \
-/etc/systemd/system/getty@tty1.service.d/autologin.conf \
-/etc/calamares
+/etc/systemd/system/getty@tty1.service.d/autologin.conf
+rm -rf /etc/calamares
 
 ## Exit gracefully even if errors occurred
 exit 0
