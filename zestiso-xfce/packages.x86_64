@@ -7,29 +7,23 @@ bash
 iptables-nft
 lib32-sdl12-compat
 libglvnd
-noto-fonts
 ntfs-3g
-qt6-multimedia-gstreamer
-phonon-qt6-gstreamer-git
 
 ## Add your packages here
-grub
-nano
-os-prober
-testdisk
-
-## Add your graphical applications here
 firefox-i18n-en-gb
 gparted
+grub
 libreoffice-fresh-en-gb
-#octopi
+nano
+octopi
+os-prober
 vlc
 gparted
-#qbittorrent
+qbittorrent
+testdisk
 
 ## ZestISO all-in-one software bundles
-bundle-filesystems
-bundle-wine
+bundle-amd-gpu
 bundle-desktop
 # bundle-archives
 # bundle-bluetooth
@@ -39,9 +33,7 @@ bundle-desktop
 # bundle-modemmanager
 # bundle-networking
 # bundle-printing
-
-## GPU drivers
-bundle-amd-gpu
+bundle-filesystems
 bundle-intel-gpu
 bundle-nvidia-foss
 #bundle-nvidia-pro
@@ -49,8 +41,9 @@ bundle-nvidia-foss
 #bundle-nvidia-pro-390xx
 #bundle-nvidia-pro-470xx
 #bundle-nvidia-pro-525xx
+bundle-wine
 
-## Uncomment for Pipewire sound server
+## Pipewire sound server
 lib32-pipewire-jack
 pipewire-alsa
 pipewire-jack
@@ -60,64 +53,45 @@ pipewire-v4l2
 pipewire-zeroconf
 wireplumber
 
-## Uncomment for a basic desktop environment
-bundle-kde
-#bundle-xfce
-
-## Uncomment for KDE applications
-ark
-discover
-dolphin
-dolphin-plugins
-filelight
-gwenview
-isoimagewriter
-kalarm
-kamoso
-kate
-kbackup
-kcalc
-kcharselect
-kcolorchooser
-kdeconnect
-kdepim-addons
-kdeplasma-addons
-kfind
-kgpg
-khelpcenter
-kmail
-kolourpaint
-konsole
-krecorder
-krename
-ktimer
-ktorrent
-kwalletmanager
-okteta
-okular
-packagekit-qt6
-plasma-systemmonitor
-plasma-vault
-spectacle
-sweeper
-yakuake
-
-## Minimal set of KDE games (about 52.25MiB install)
-khangman
-kblocks
-kbreakout
-kmahjongg
-kmines
-knights
-kpat
-ksudoku
-ktouch
-picmi
-
-## Wallpapers and themes
-plymouth-theme-zestiso-breeze
-zestiso-branding
-zestiso-wallpapers
+## XFCE desktop environment and (optional) applications
+bundle-xfce
+catfish
+galculator
+gnu-free-fonts
+mousepad
+orage
+ristretto
+xarchiver
+xfce4-calculator-plugin
+xfce4-clipman-plugin
+xfce4-cpufreq-plugin
+xfce4-cpugraph-plugin
+xfce4-dict
+xfce4-diskperf-plugin
+xfce4-docklike-plugin
+xfce4-fsguard-plugin
+xfce4-generic-slider
+xfce4-genmon-plugin
+xfce4-mailwatch-plugin
+xfce4-mount-plugin
+xfce4-mpc-plugin
+xfce4-netload-plugin
+xfce4-panel-profiles
+xfce4-places-plugin
+xfce4-screenshooter
+xfce4-sensors-plugin
+xfce4-smartbookmark-plugin
+xfce4-stopwatch-plugin
+xfce4-systemload-plugin
+xfce4-taskmanager
+xfce4-time-out-plugin
+xfce4-timer-plugin
+xfce4-verve-plugin
+xfce4-weather-plugin
+xfce4-windowck-plugin
+xfce4-whiskermenu-plugin
+xfce4-xkb-plugin
+xfce4-terminal
 
 ## Compilers and extra software repositories
 base-devel
@@ -126,17 +100,25 @@ chaotic-mirrorlist
 git
 yay
 
+## Wallpapers and themes
+#plymouth-theme-zestiso-breeze
+zestiso-branding
+#zestiso-wallpapers
+
+
+
+#### DO NOT EDIT THE FOLLOWING SECTION ####
 ## Installer (will be removed after installation)
 alci-calamares
 arch-install-scripts
 archinstall
-
+#
 ## DO NOT REMOVE - Essential ArchISO packages
 mkinitcpio-archiso
 pv
 syslinux
 zestiso-archiso-files
-
+#
 ## DO NOT REMOVE - Essential Arch Linux system packages
 amd-ucode
 base

@@ -1,6 +1,6 @@
 #!/bin/sh
 ## Create users
-useradd -m arch; passwd -d arch; gpasswd -a arch wheel
+useradd -m live; passwd -d live; gpasswd -a live wheel
 passwd -d root
 
 ## Uncomment mirrors in pacman mirrorlist

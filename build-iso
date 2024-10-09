@@ -1,5 +1,6 @@
 #!/bin/sh
-ARCHISO_PROFILE="zestiso-kde"
+ARCHISO_PROFILE="$1"
+[ -z "$1" ] && ARCHISO_PROFILE="zestiso-kde"
 MEM_MB_SIZE=$(free -m | grep "Mem:" | xargs | cut -d ' ' -f 2)
 if [ $MEM_MB_SIZE -ge 20480 ]; then
 	ARCHISO_WORK_DIR="/tmp/archiso-tmp"

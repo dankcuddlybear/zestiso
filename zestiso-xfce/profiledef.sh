@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2034
+
 iso_name="zestiso"
 iso_label="ZEST_$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y%m)"
 iso_publisher="ZestISO <https://github.com/dankcuddlybear/zestiso>"
