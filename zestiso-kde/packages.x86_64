@@ -20,16 +20,17 @@ testdisk
 
 ## Add your graphical applications here
 firefox-i18n-en-gb
+gparted
 libreoffice-fresh-en-gb
-octopi
+#octopi
 vlc
-#gparted
+gparted
 #qbittorrent
 
 ## ZestISO all-in-one software bundles
 bundle-filesystems
 bundle-wine
-#bundle-desktop
+bundle-desktop
 # bundle-archives
 # bundle-bluetooth
 # bundle-cli-utils
@@ -65,6 +66,7 @@ bundle-kde
 
 ## Uncomment for KDE applications
 ark
+discover
 dolphin
 dolphin-plugins
 filelight
@@ -93,7 +95,7 @@ ktorrent
 kwalletmanager
 okteta
 okular
-partitionmanager
+packagekit-qt6
 plasma-systemmonitor
 plasma-vault
 spectacle

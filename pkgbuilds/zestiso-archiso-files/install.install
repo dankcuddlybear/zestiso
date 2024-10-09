@@ -1,0 +1,3 @@
+post_install() {
+	cp -a /usr/share/zestiso/archiso-files/etc /
+}

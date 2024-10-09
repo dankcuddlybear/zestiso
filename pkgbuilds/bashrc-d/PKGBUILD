@@ -2,7 +2,7 @@
 pkgname=bashrc-d
 pkgver=$(date +%Y.%-m.%-d)
 pkgrel=$(expr $(date +%-S) + $(expr 60 \* $(date +%-M)) + $(expr 3600 \* $(date +%-H)))
-pkgdesc='Set up bash to use drop-in config files in /etc/bashrc.d instead of the single file /etc/bash.bashrc'
+pkgdesc='Allows the bash shell to load multiple scripts from /etc/bashrc.d instead of a single file /etc/bash.bashrc'
 arch=(any)
 url='https://github.com/dankcuddlybear/zestiso'
 depends=(bash)
