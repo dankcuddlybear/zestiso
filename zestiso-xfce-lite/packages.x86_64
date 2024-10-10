@@ -5,7 +5,9 @@ linux-zen-headers
 ## Custom defaults
 bash
 iptables-nft
+libglvnd
 ntfs-3g
+polkit
 
 ## Add your packages here
 firefox-i18n-en-gb

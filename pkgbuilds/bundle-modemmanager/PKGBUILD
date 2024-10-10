@@ -10,5 +10,6 @@ install=install.install
 depends=(android-udev
 	bundle-networking
 	modemmanager
+# 	systemd
 	usb_modeswitch
 )

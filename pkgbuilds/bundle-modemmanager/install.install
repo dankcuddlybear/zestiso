@@ -4,5 +4,5 @@ post_install() {
 	systemctl --now mask systemd-resolved systemd-networkd &> /dev/null
 	
 	## Enable ModemManager
-	systemctl --now enable ModemManager
+	systemctl --now enable ModemManager &> /dev/null
 }
