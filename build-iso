@@ -8,5 +8,5 @@ else ARCHISO_WORK_DIR="work"; fi
 sudo rm -rf out
 sudo mkarchiso -v -w "$ARCHISO_WORK_DIR" "$ARCHISO_PROFILE" && sync && \
 sudo chown -R $(whoami):$(whoami) out && cd out && mv *.iso ../../zestiso-iso && \
-cd ../ && rmdir out
+cd ../ && rm -rf out /tmp/archiso-tmp
 sync
