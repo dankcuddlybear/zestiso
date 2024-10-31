@@ -13,6 +13,7 @@ qt6-multimedia-gstreamer
 phonon-qt6-gstreamer-git
 
 ## Add your packages here
+firefox
 firefox-i18n-en-gb
 gparted
 grub
@@ -25,7 +26,7 @@ os-prober
 testdisk
 vlc
 
-## ZestISO all-in-one software bundles
+## Additional functionality
 bundle-desktop
 # bundle-archives
 # bundle-bluetooth
@@ -112,7 +113,7 @@ ksudoku
 ktouch
 picmi
 
-## Wallpapers and themes
+## Themes and wallpapers
 plymouth-theme-zestiso-breeze
 zestiso-branding
 zestiso-wallpapers

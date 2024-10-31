@@ -1,0 +1,5 @@
+post_install() {
+	systemctl --now enable sunshine &> /dev/null
+	echo "Sunshine GameStream host has been started."
+	echo "Please open https://localhost:47990 in your web browser to set up Sunshine."
+}
