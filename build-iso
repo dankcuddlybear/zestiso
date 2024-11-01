@@ -133,12 +133,10 @@ echo "fi" >> "$SETUP_SCRIPT"
 chmod +x "$SETUP_SCRIPT"
 echo "The following optional software packages will be available:"; echo "$OPT_PKG"
 
-exit
-
 echo "Cleaning up..."
 sudo rm -rf out
 sudo mkarchiso -v -w "$ARCHISO_WORK_DIR" "$ARCHISO_PROFILE" && sync && \
 sudo chown -R $(whoami):$(whoami) out && cd out && \
 mkdir -p ../../zestiso-iso && mv *.iso ../../zestiso-iso && \
-cd ../ && echo "Cleaning up..." && rm -rf out /tmp/archiso-tmp
+cd ../ && echo "Cleaning up..." && sudo rm -rf out /tmp/archiso-tmp
 sync
