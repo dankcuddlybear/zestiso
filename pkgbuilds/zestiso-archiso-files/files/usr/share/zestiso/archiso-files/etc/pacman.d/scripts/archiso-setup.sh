@@ -21,6 +21,10 @@ pacman-key --lsign-key 3056513887B78AEB
 ## Replace mkinitcpio.conf so that mkinitcpio is properly configured for Arch install
 mv /etc/mkinitcpio.conf.system /etc/mkinitcpio.conf
 
+## Replace Calamares auto-start shortcut
+mkdir -p /etc/xdg/autostart &> /dev/null
+cp /usr/share/zestiso/calamares.desktop /etc/xdg/autostart/calamares.desktop
+
 ## Delete hooks/scripts only used for ArchISO image generation
 sh -c "rm -- $(grep -Frl 'remove from airootfs' /etc/pacman.d/hooks/)"
 rm -f /etc/pacman.d/scripts/archiso-setup.sh

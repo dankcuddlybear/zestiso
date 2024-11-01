@@ -2,10 +2,6 @@
 ## Modify mkinitcpio preset
 sed -i "/PRESETS=('archiso')/c\PRESETS=('default')" /etc/mkinitcpio.d/linux.preset
 
-## Show software selection dialog
-chmod +x /etc/calamares/select-software.sh
-/etc/calamares/select-software.sh
-
 ## Remove unnecessary packages
 UNINSTALL_PKG=""; echo "Detecting hardware..."
 MarkPkgForRemoval() {

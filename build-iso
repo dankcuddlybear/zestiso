@@ -30,7 +30,7 @@ PkgDesc() {
 sudo rm -f "$SETUP_SCRIPT"
 echo "Generating software selection script, please wait..."
 echo '#!/bin/bash' >> "$SETUP_SCRIPT"
-echo "PKG_SELECTION=\"\$(echo \"\$(kdialog --checklist \"Click to highlight extra software to install (default: everything):\" \\" >> "$SETUP_SCRIPT"
+echo "PKG_SELECTION=\"\$(echo \"\$(kdialog --checklist \"Select extra software (default: everything)\nClick to select (highlighted) or deselect (not highlighted)\" \\" >> "$SETUP_SCRIPT"
 IGNORE=0; OPT_PKG=""; while IFS= read -r LINE; do
 	LINE="$(echo "$LINE" | xargs)"
 	if [ -z "$LINE" ]; then IGNORE=0
