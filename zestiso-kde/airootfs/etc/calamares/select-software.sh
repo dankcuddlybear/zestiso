@@ -1,5 +1,5 @@
 #!/bin/bash
-PKG_SELECTION="$(echo "$(kdialog --checklist "Click to highlight extra software to install (default: everything):" \
+PKG_SELECTION="$(echo "$(kdialog --checklist "Select extra software (default: everything)\nClick to select (highlighted) or deselect (not highlighted)" \
 - "[ Extra software ]" off \
 firefox "  firefox: Fast, Private & Safe Web Browser" on \
 firefox-i18n-en-gb "  firefox-i18n-en-gb: English (British) language pack for Firefox" on \
