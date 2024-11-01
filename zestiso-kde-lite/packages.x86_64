@@ -1,0 +1,150 @@
+## Linux kernel and headers
+linux-zen
+linux-zen-headers
+
+## Custom defaults
+bash
+iptables-nft
+lib32-sdl12-compat
+libglvnd
+noto-fonts
+ntfs-3g
+qt6-multimedia-gstreamer
+phonon-qt6-gstreamer-git
+
+## Add your packages here
+firefox
+firefox-i18n-en-gb
+gparted
+grub
+libreoffice-fresh
+libreoffice-fresh-en-gb
+nano
+#octopi
+os-prober
+#qbittorrent
+testdisk
+vlc
+
+## Additional functionality
+bundle-filesystems
+bundle-wine
+#bundle-desktop
+bundle-archives
+bundle-bluetooth
+bundle-cli-utils
+bundle-media-codecs
+# bundle-modemmanager
+bundle-networking
+bundle-printing
+#bundle-gvfs
+
+## GPU drivers
+bundle-amd-gpu
+bundle-intel-gpu
+bundle-nvidia-foss
+#bundle-nvidia-pro
+#bundle-nvidia-pro-340xx
+#bundle-nvidia-pro-390xx
+#bundle-nvidia-pro-470xx
+#bundle-nvidia-pro-525xx
+
+## Uncomment for Pipewire sound server
+lib32-pipewire-jack
+pipewire-alsa
+pipewire-jack
+pipewire-pulse
+pipewire-roc
+pipewire-v4l2
+pipewire-zeroconf
+wireplumber
+
+## Uncomment for a basic desktop environment
+bundle-kde
+#bundle-xfce
+
+## Uncomment for KDE applications
+ark
+discover
+dolphin
+dolphin-plugins
+filelight
+gwenview
+#isoimagewriter
+#kalarm
+kamoso
+kate
+#kbackup
+kcalc
+kcharselect
+kcolorchooser
+#kdeconnect
+#kdepim-addons
+kdeplasma-addons
+kfind
+#kgpg
+#khelpcenter
+#kmail
+kolourpaint
+konsole
+#krecorder
+krename
+#ktimer
+ktorrent
+kwalletmanager
+okteta
+okular
+packagekit-qt6
+plasma-systemmonitor
+#plasma-vault
+spectacle
+#sweeper
+#yakuake
+
+## Minimal set of KDE games (about 52.25MiB install)
+#khangman
+#kblocks
+#kbreakout
+#kmahjongg
+#kmines
+#knights
+#kpat
+#ksudoku
+#ktouch
+#picmi
+
+## Themes and wallpapers
+plymouth-theme-breeze
+zestiso-branding
+#zestiso-wallpapers
+
+## Compilers and extra software repositories
+base-devel
+chaotic-keyring
+chaotic-mirrorlist
+git
+yay
+
+
+
+#### DO NOT EDIT THE FOLLOWING SECTION ####
+## Installer (will be removed after installation)
+alci-calamares
+arch-install-scripts
+archinstall
+#
+## DO NOT REMOVE - Essential ArchISO packages
+mkinitcpio-archiso
+pv
+syslinux
+zestiso-archiso-files
+#
+## DO NOT REMOVE - Essential Arch Linux system packages
+amd-ucode
+base
+efibootmgr
+intel-ucode
+linux-firmware
+mkinitcpio
+sudo
+terminus-font

@@ -10,7 +10,6 @@ depends=()
 package() {
 	cp -r "$srcdir/../files/usr" "$pkgdir"
 	"$srcdir/../../set-default-permissions.sh" "$pkgdir"
-	chmod +x "$pkgdir/usr/bin/zestiso-installer"
 	chmod +x "$pkgdir/usr/share/zestiso/archiso-files/etc/calamares/finalise-install.sh"
 	chmod +x "$pkgdir/usr/share/zestiso/archiso-files/etc/pacman.d/scripts/archiso-setup.sh"
 	chmod 750 "$pkgdir/usr/share/zestiso/archiso-files/etc/polkit-1/rules.d"
