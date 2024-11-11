@@ -36,3 +36,6 @@ net.ipv4.ip_local_port_range = 1024 65535
 # Protect against tcp time-wait assassination hazards,
 # drop RST packets for sockets in the time-wait state.
 net.ipv4.tcp_rfc1337 = 1
+
+# Hide kernel messages on console
+kernel.printk = 3 3 3 3
