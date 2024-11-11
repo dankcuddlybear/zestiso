@@ -13,20 +13,23 @@ qt6-multimedia-gstreamer
 phonon-qt6-gstreamer-git
 
 ## Add your packages here
-firefox
+grub
+nano
+os-prober
+testdisk
+
+## Add your graphical applications here
 firefox-i18n-en-gb
 gparted
-grub
-libreoffice-fresh
 libreoffice-fresh-en-gb
-nano
 #octopi
-os-prober
-#qbittorrent
-testdisk
 vlc
+gparted
+#qbittorrent
 
-## Additional functionality
+## ZestISO all-in-one software bundles
+bundle-filesystems
+bundle-wine
 bundle-desktop
 # bundle-archives
 # bundle-bluetooth
@@ -36,8 +39,6 @@ bundle-desktop
 # bundle-modemmanager
 # bundle-networking
 # bundle-printing
-bundle-filesystems
-bundle-wine
 
 ## GPU drivers
 bundle-amd-gpu
@@ -113,7 +114,7 @@ ksudoku
 ktouch
 picmi
 
-## Themes and wallpapers
+## Wallpapers and themes
 plymouth-theme-zestiso-breeze
 zestiso-branding
 zestiso-wallpapers

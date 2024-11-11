@@ -1,8 +1,34 @@
 [ActionPlugins][0]
+MiddleButton;NoModifier=org.kde.paste
 RightButton;NoModifier=org.kde.contextmenu
 
 [ActionPlugins][1]
 RightButton;NoModifier=org.kde.contextmenu
+
+[Containments][27]
+ItemGeometries-1536x864=
+ItemGeometriesHorizontal=
+activityId=74d61cec-5601-414b-8580-942906a3db96
+formfactor=0
+immutability=1
+lastScreen=0
+location=0
+plugin=org.kde.plasma.folder
+wallpaperplugin=org.kde.image
+
+[Containments][27][ConfigDialog]
+DialogHeight=792
+DialogWidth=1536
+
+[Containments][27][General]
+arrangement=1
+locked=true
+toolTips=true
+
+[Containments][27][Wallpaper][org.kde.image][General]
+Image=/usr/share/wallpapers/zestiso-wallpapers/01-oranges.jpg
+PreviewImage=/usr/share/wallpapers/zestiso-wallpapers/01-oranges.jpg
+SlidePaths=/usr/share/wallpapers/
 
 [Containments][28]
 activityId=
@@ -19,7 +45,7 @@ plugin=org.kde.plasma.kickoff
 
 [Containments][28][Applets][29][Configuration]
 PreloadWeight=100
-popupHeight=613
+popupHeight=562
 popupWidth=665
 
 [Containments][28][Applets][29][Configuration][General]
@@ -45,7 +71,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][28][Applets][33][Configuration]
-PreloadWeight=65
+PreloadWeight=60
 SystrayContainmentId=34
 
 [Containments][28][Applets][47]
@@ -53,7 +79,6 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][28][Applets][47][Configuration][Appearance]
-fontWeight=400
 use24hFormat=0
 
 [Containments][28][Applets][47][Configuration][ConfigDialog]
@@ -130,7 +155,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][34][Applets][46][Configuration]
-PreloadWeight=80
+PreloadWeight=60
 
 [Containments][34][Applets][46][Configuration][General]
 migrated=true
@@ -164,26 +189,5 @@ hiddenItems=org.kde.plasma.brightness,org.kde.kscreen,org.kde.plasma.keyboardlay
 knownItems=org.kde.kdeconnect,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.vault,org.kde.plasma.volume
 shownItems=org.kde.plasma.volume,org.kde.plasma.networkmanagement
 
-[Containments][49]
-ItemGeometries-1280x800=
-ItemGeometriesHorizontal=
-activityId=f4f8d8a9-c20e-4e5c-8b3e-fae66b574da3
-formfactor=0
-immutability=1
-lastScreen=0
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.image
-
-[Containments][49][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
-
-[Containments][49][Wallpaper][org.kde.image][General]
-Image=/usr/share/wallpapers/zestiso-wallpapers/01-oranges.jpg
-PreviewImage=/usr/share/wallpapers/zestiso-wallpapers/01-oranges.jpg
-SlidePaths=/usr/share/wallpapers/
-
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=

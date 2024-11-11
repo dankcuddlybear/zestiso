@@ -35,6 +35,7 @@ depends=(bluedevil
 	libappimage
 	noto-fonts noto-fonts-cjk noto-fonts-emoji
 	openexr
+	plasma-browser-integration
 	plasma-desktop glib2 ibus scim
 	plasma-disks
 	plasma-firewall

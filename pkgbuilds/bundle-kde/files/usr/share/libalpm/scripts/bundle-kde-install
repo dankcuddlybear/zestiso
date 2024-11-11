@@ -2,7 +2,6 @@
 ## Copy SDDM config
 mkdir /etc/sddm.conf.d &> /dev/null
 cp -n /usr/share/KDE/bundle-kde/custom-user-config/sddm.conf.d/*.conf /etc/sddm.conf.d/
-cp /usr/share/KDE/bundle-kde/custom-user-config/theme.conf.user /usr/share/sddm/themes/breeze/
 
 ## If installed on a tablet or touch screen device,
 ## switch SDDM to X11 mode as virtual keyboard does not work on Walyand
