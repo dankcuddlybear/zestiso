@@ -1,4 +1,10 @@
 #!/bin/sh
-printf "Enabling important services..."
-systemctl --now enable fstrim.timer systemd-timesyncd arch-tweaks-hwsetup
-printf " Done.\n"
+## Configure Systemd
+sed '/DefaultTimeoutStopSec/c\DefaultTimeoutStopSec=10s' system.conf
+
+## Enable services
+systemctl --now enable fstrim.timer systemd-timesyncd arch-tweaks-hwsetup &> /dev/null
+
+
+## Exit gracefully
+exit 0
