@@ -25,20 +25,20 @@ libreoffice-fresh-en-gb
 #octopi
 vlc
 gparted
-#qbittorrent
+qbittorrent
 
 ## ZestISO all-in-one software bundles
 bundle-filesystems
 bundle-wine
 bundle-desktop
-# bundle-archives
-# bundle-bluetooth
+bundle-archives
+bundle-bluetooth
 # bundle-cli-utils
 # bundle-gvfs
-# bundle-media-codecs
-# bundle-modemmanager
-# bundle-networking
-# bundle-printing
+bundle-media-codecs
+bundle-modemmanager
+bundle-networking
+bundle-printing
 
 ## GPU drivers
 bundle-amd-gpu
@@ -72,7 +72,7 @@ dolphin-plugins
 filelight
 gwenview
 isoimagewriter
-kalarm
+#kalarm
 kamoso
 kate
 kbackup
@@ -80,19 +80,19 @@ kcalc
 kcharselect
 kcolorchooser
 kdeconnect
-kdepim-addons
+#kdepim-addons
 kdeplasma-addons
 kfind
 kgpg
 khelpcenter
-kmail
+#kmail
 kolourpaint
 konsole
 krecorder
 krename
-ktimer
+#ktimer
 ktorrent
-kwalletmanager
+#kwalletmanager
 okteta
 okular
 packagekit-qt6
@@ -103,21 +103,20 @@ sweeper
 yakuake
 
 ## Minimal set of KDE games (about 52.25MiB install)
-khangman
-kblocks
-kbreakout
-kmahjongg
-kmines
-knights
-kpat
-ksudoku
-ktouch
-picmi
+#khangman
+#kblocks
+#kbreakout
+#kmahjongg
+#kmines
+#knights
+#kpat
+#ksudoku
+#ktouch
+#picmi
 
 ## Wallpapers and themes
-plymouth-theme-zestiso-breeze
+plymouth-theme-breeze
 zestiso-branding
-zestiso-wallpapers
 
 ## Compilers and extra software repositories
 base-devel
