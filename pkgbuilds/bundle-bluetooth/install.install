@@ -1,4 +1,0 @@
-post_install() {
-	## Enable bluetooth service
-	systemctl --now enable bluetooth &> /dev/null
-}

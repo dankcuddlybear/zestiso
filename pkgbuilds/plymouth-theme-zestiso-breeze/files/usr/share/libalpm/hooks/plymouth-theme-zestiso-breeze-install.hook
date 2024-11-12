@@ -1,0 +1,9 @@
+[Trigger]
+Type = Package
+Operation = Install
+Target = plymouth-theme-zestiso-breeze
+
+[Action]
+Description = Configuring
+When = PostTransaction
+Exec = /usr/share/libalpm/scripts/plymouth-theme-zestiso-breeze-install

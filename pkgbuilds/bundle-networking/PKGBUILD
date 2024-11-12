@@ -6,7 +6,6 @@ pkgrel=$(expr $(date +%-S) + $(expr 60 \* $(date +%-M)) + $(expr 3600 \* $(date 
 pkgdesc='Networking support via NetworkManager - all-in-one bundle (Wi-Fi/ethernet)'
 arch=(any)
 url='https://github.com/dankcuddlybear/zestiso'
-install=install.install
 depends=(avahi
 	ethtool
 	iw
@@ -16,3 +15,10 @@ depends=(avahi
 	usb_modeswitch
 	wireless-regdb
 )
+package() {
+	cp -r "$srcdir/../files/usr" "$pkgdir"
+	"$srcdir/../../set-default-permissions.sh" "$pkgdir"
+	CDIR="$(pwd)"; for DIR in "$pkgdir/usr/share/libalpm/hooks"; do
+		cd "$DIR"; chmod +x *
+	done; cd "$CDIR"
+}

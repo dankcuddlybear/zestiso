@@ -28,15 +28,15 @@ gparted
 qbittorrent
 
 ## ZestISO all-in-one software bundles
-bundle-filesystems
+#bundle-filesystems
 bundle-wine
 bundle-desktop
-bundle-archives
+#bundle-archives
 bundle-bluetooth
 # bundle-cli-utils
 # bundle-gvfs
 bundle-media-codecs
-bundle-modemmanager
+#bundle-modemmanager
 bundle-networking
 bundle-printing
 
@@ -79,7 +79,7 @@ kbackup
 kcalc
 kcharselect
 kcolorchooser
-kdeconnect
+#kdeconnect
 #kdepim-addons
 kdeplasma-addons
 kfind

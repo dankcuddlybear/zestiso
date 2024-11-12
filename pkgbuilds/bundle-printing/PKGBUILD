@@ -6,7 +6,6 @@ pkgrel=$(expr $(date +%-S) + $(expr 60 \* $(date +%-M)) + $(expr 3600 \* $(date 
 pkgdesc='Printing and scanning - all-in-one bundle'
 arch=(any)
 url='https://github.com/dankcuddlybear/zestiso'
-install=install.install
 depends=(avahi
 	bluez-cups
 	cups-browsed
@@ -25,3 +24,10 @@ depends=(avahi
 	system-config-printer
 	xdg-utils
 )
+package() {
+	cp -r "$srcdir/../files/usr" "$pkgdir"
+	"$srcdir/../../set-default-permissions.sh" "$pkgdir"
+	CDIR="$(pwd)"; for DIR in "$pkgdir/usr/share/libalpm/hooks"; do
+		cd "$DIR"; chmod +x *
+	done; cd "$CDIR"
+}
