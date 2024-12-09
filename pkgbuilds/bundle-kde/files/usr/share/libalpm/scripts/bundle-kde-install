@@ -1,12 +1,24 @@
 #!/bin/sh
 ## Copy SDDM config
-mkdir /etc/sddm.conf.d &> /dev/null
+mkdir -p /etc/sddm.conf.d &> /dev/null
 cp -n /usr/share/KDE/bundle-kde/custom-user-config/sddm.conf.d/*.conf /etc/sddm.conf.d/
 
 ## If installed on a tablet or touch screen device,
 ## switch SDDM to X11 mode as virtual keyboard does not work on Walyand
 (udevadm info --export-db --no-pager | grep -m 1 -i "Touchscreen" &> /dev/null) && \
 sed -i "s/DisplayServer=wayland/DisplayServer=x11/g" /etc/sddm.conf.d/wayland.conf
+
+## Set SDDM custom wallpaper, if installed
+if [ -f /usr/share/wallpapers/default-wallpaper.png ] || [ -f /usr/share/wallpapers/default-wallpaper.jpg ]; then
+    mkdir -p /usr/share/sddm/themes/breeze
+    touch /usr/share/sddm/themes/breeze/theme.conf.user
+    echo "[General]" > /usr/share/sddm/themes/breeze/theme.conf.user
+    if [ -f /usr/share/wallpapers/default-wallpaper.png ]; then
+        echo "background=/usr/share/wallpapers/default-wallpaper.png" >> /usr/share/sddm/themes/breeze/theme.conf.user
+    elif [ -f /usr/share/wallpapers/default-wallpaper.jpg ]; then
+        echo "background=/usr/share/wallpapers/default-wallpaper.jpg" >> /usr/share/sddm/themes/breeze/theme.conf.user
+    fi; echo "type=image" >> /usr/share/sddm/themes/breeze/theme.conf.user
+fi
 
 ## Disable existing display manager and enable SDDM
 rm -f /etc/systemd/system/display-manager.service &> /dev/null

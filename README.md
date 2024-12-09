@@ -54,7 +54,8 @@ Make sure you also add keys for other repositories you need if necessary.
 5) The file profiledef.sh defines properties for the ISO, such as the filename, label, version, file permissions and more. Bootloader configuration is found inside the folders grub (for UEFI) and syslinux (for BIOS). The airootfs folder contains files to include in the root filesystem in the final ISO image. See also https://wiki.archlinux.org/title/Archiso#Profile_structure for more information.
 6) The file airootfs/etc/pacman.d/scripts/archiso-setup.sh is a script that will finish setting up the ISO after pacman has finished installing packages. For example, uncomment mirrors in the pacman mirrorlist, enable services, initialise pacman keyring and add keys. The script will automatically add keys for Chaotic-AUR. Make sure to add commands to add keys for any custom repositories you need. Make sure to enable whatever services you need.
 7) OPTIONAL: configure default hostname (airootfs/etc/hostname), system locale (airootfs/etc/locale.conf and airootfs/etc/locale.gen), console keyboard layout and font (airootfs/etc/vconsole.conf) and timezone (ln -sf /usr/share/zoneinfo/Region/City airootfs/etc/localtime).
-8) Go back to the zestiso folder. If you have 16GB RAM or less, run this command to build the ISO:
+8) OPTIONAL: Place a custom wallpaper (named default-wallpaper.png or default-wallpaper.jpg) inside airootfs/usr/share/wallpapers.
+9) Go back to the zestiso folder. If you have 16GB RAM or less, run this command to build the ISO:
 ```
 sudo mkarchiso -v ./zestiso-kde
 ```
@@ -62,6 +63,6 @@ If you have more than 16GB RAM, you can use the /tmp directory in RAM to avoid s
 ```
 sudo mkarchiso -v -w /tmp/zestiso-tmp ./zestiso-kde
 ```
-9) Once the ISO has been built, you can flash a USB stick with Ventoy and drop the ISO on the USB stick. This is the reccomended method as Ventoy allows booting multiple different ISOs from the same USB drive, and it's as simple as dragging and dropping the ISO files.
+10) Once the ISO has been built, you can flash a USB stick with Ventoy and drop the ISO on the USB stick. This is the reccomended method as Ventoy allows booting multiple different ISOs from the same USB drive, and it's as simple as dragging and dropping the ISO files.
 
 That's it, you can now boot the image on a PC.
