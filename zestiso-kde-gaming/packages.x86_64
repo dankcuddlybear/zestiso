@@ -11,6 +11,7 @@ noto-fonts
 ntfs-3g
 qt6-multimedia-gstreamer
 phonon-qt6-gstreamer-git
+wine-ge-custom
 
 ## Add your packages here
 grub
@@ -22,23 +23,22 @@ testdisk
 firefox-i18n-en-gb
 gparted
 libreoffice-fresh-en-gb
-octopi
-vlc
-gparted
+#octopi
 qbittorrent
+vlc
 
 ## ZestISO all-in-one software bundles
-#bundle-filesystems
-bundle-wine
-bundle-desktop
-#bundle-archives
+arch-tweaks
+bundle-archives
 bundle-bluetooth
-# bundle-cli-utils
-# bundle-gvfs
+bundle-cli-utils
+bundle-desktop
+bundle-filesystems
 bundle-media-codecs
 #bundle-modemmanager
 bundle-networking
 bundle-printing
+bundle-wine
 
 ## GPU drivers
 bundle-amd-gpu
@@ -60,9 +60,9 @@ pipewire-v4l2
 pipewire-zeroconf
 wireplumber
 
-## Uncomment for a basic desktop environment
+## Uncomment for KDE Plasma desktop environment
 bundle-kde
-#bundle-xfce
+zestiso-config-kde
 
 ## Uncomment for KDE applications
 ark
@@ -72,13 +72,14 @@ dolphin-plugins
 filelight
 gwenview
 isoimagewriter
-kamoso
+#kalarm
+#kamoso
 kate
 kbackup
 kcalc
 kcharselect
 kcolorchooser
-#kdeconnect
+kdeconnect
 #kdepim-addons
 kdeplasma-addons
 kfind
@@ -91,7 +92,7 @@ konsole
 krename
 #ktimer
 #ktorrent
-#kwalletmanager
+kwalletmanager
 okteta
 okular
 packagekit-qt6
@@ -100,6 +101,10 @@ plasma-vault
 spectacle
 sweeper
 yakuake
+
+## Gaming
+proton-ge-custom
+steam-native-runtime
 
 ## Wallpapers and themes
 plymouth-theme-breeze

@@ -11,6 +11,7 @@ noto-fonts
 ntfs-3g
 qt6-multimedia-gstreamer
 phonon-qt6-gstreamer-git
+#wine-ge-custom
 
 ## Add your packages here
 grub
@@ -28,17 +29,17 @@ gparted
 qbittorrent
 
 ## ZestISO all-in-one software bundles
-#bundle-filesystems
-bundle-wine
-bundle-desktop
-#bundle-archives
+arch-tweaks
+bundle-archives
 bundle-bluetooth
-# bundle-cli-utils
-# bundle-gvfs
+bundle-cli-utils
+bundle-desktop
+bundle-filesystems
 bundle-media-codecs
-#bundle-modemmanager
+bundle-modemmanager
 bundle-networking
 bundle-printing
+bundle-wine
 
 ## GPU drivers
 bundle-amd-gpu
@@ -60,9 +61,9 @@ pipewire-v4l2
 pipewire-zeroconf
 wireplumber
 
-## Uncomment for a basic desktop environment
+## Uncomment for KDE Plasma desktop environment
 bundle-kde
-#bundle-xfce
+zestiso-config-kde
 
 ## Uncomment for KDE applications
 ark
@@ -72,27 +73,27 @@ dolphin-plugins
 filelight
 gwenview
 isoimagewriter
-#kalarm
+kalarm
 kamoso
 kate
 kbackup
 kcalc
 kcharselect
 kcolorchooser
-#kdeconnect
-#kdepim-addons
+kdeconnect
+kdepim-addons
 kdeplasma-addons
 kfind
 kgpg
 khelpcenter
-#kmail
+kmail
 kolourpaint
 konsole
 krecorder
 krename
-#ktimer
+ktimer
 ktorrent
-#kwalletmanager
+kwalletmanager
 okteta
 okular
 packagekit-qt6
@@ -101,18 +102,6 @@ plasma-vault
 spectacle
 sweeper
 yakuake
-
-## Minimal set of KDE games (about 52.25MiB install)
-#khangman
-#kblocks
-#kbreakout
-#kmahjongg
-#kmines
-#knights
-#kpat
-#ksudoku
-#ktouch
-#picmi
 
 ## Wallpapers and themes
 plymouth-theme-breeze

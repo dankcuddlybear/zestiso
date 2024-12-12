@@ -11,6 +11,7 @@ noto-fonts
 ntfs-3g
 qt6-multimedia-gstreamer
 phonon-qt6-gstreamer-git
+#wine-ge-custom
 
 ## Add your packages here
 grub
@@ -24,20 +25,21 @@ firefox-i18n-en-gb
 #libreoffice-fresh-en-gb
 #octopi
 #vlc
+#gparted
 #qbittorrent
 
 ## ZestISO all-in-one software bundles
-#bundle-filesystems
-#bundle-wine
-bundle-desktop
+arch-tweaks
 #bundle-archives
 bundle-bluetooth
-# bundle-cli-utils
-# bundle-gvfs
-bundle-media-codecs
+bundle-cli-utils
+bundle-desktop
+#bundle-filesystems
+#bundle-media-codecs
 #bundle-modemmanager
 bundle-networking
 bundle-printing
+#bundle-wine
 
 ## GPU drivers
 bundle-amd-gpu
@@ -59,13 +61,13 @@ pipewire-v4l2
 pipewire-zeroconf
 wireplumber
 
-## Uncomment for a basic desktop environment
+## Uncomment for KDE Plasma desktop environment
 bundle-kde
-#bundle-xfce
+#zestiso-config-kde
 
 ## Uncomment for KDE applications
 ark
-#discover
+discover
 dolphin
 #dolphin-plugins
 #filelight
@@ -76,25 +78,25 @@ gwenview
 kate
 #kbackup
 kcalc
-kcharselect
+#kcharselect
 #kcolorchooser
 #kdeconnect
 #kdepim-addons
 #kdeplasma-addons
 #kfind
 #kgpg
-#khelpcenter
+khelpcenter
 #kmail
-#kolourpaint
+kolourpaint
 konsole
 #krecorder
 #krename
 #ktimer
 #ktorrent
-#kwalletmanager
+kwalletmanager
 #okteta
-#okular
-#packagekit-qt6
+okular
+packagekit-qt6
 plasma-systemmonitor
 #plasma-vault
 spectacle
@@ -103,7 +105,7 @@ spectacle
 
 ## Wallpapers and themes
 plymouth-theme-breeze
-zestiso-branding
+#zestiso-branding
 
 ## Compilers and extra software repositories
 base-devel
