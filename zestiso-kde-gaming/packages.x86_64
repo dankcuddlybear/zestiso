@@ -62,7 +62,7 @@ wireplumber
 
 ## Uncomment for KDE Plasma desktop environment
 bundle-kde
-zestiso-config-kde
+zestiso-config-kde-gaming
 
 ## Uncomment for KDE applications
 ark
@@ -107,6 +107,7 @@ proton-ge-custom
 steam-native-runtime
 
 ## Wallpapers and themes
+plasma-colors-midnight
 plymouth-theme-breeze
 zestiso-branding
 

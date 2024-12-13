@@ -1,0 +1,9 @@
+[Trigger]
+Type = Package
+Operation = Install
+Target = zestiso-config-kde-gaming
+
+[Action]
+Description = Configuring KDE Plasma and SDDM
+When = PostTransaction
+Exec = /usr/share/libalpm/scripts/zestiso-config-kde-gaming-install

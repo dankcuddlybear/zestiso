@@ -4,7 +4,7 @@ iso_name="zestiso"
 iso_label="ZEST_$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%y%m%d)"
 iso_publisher="ZestISO <https://github.com/dankcuddlybear/zestiso>"
 iso_application="ZestISO"
-iso_version="kde-$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y.%m.%d)"
+iso_version="kde-lite-$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y.%m.%d)"
 install_dir="arch"
 buildmodes=('iso')
 bootmodes=('bios.syslinux.mbr' 'bios.syslinux.eltorito'

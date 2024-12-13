@@ -5,6 +5,7 @@ pkgrel=$(expr $(date +%-S) + $(expr 60 \* $(date +%-M)) + $(expr 3600 \* $(date 
 pkgdesc='ZestISO custom configuration for KDE Plasma'
 arch=(any)
 url='https://github.com/dankcuddlybear/zestiso'
+conflicts=('zestiso-config-kde-gaming')
 depends=(
 	bundle-kde
 )
