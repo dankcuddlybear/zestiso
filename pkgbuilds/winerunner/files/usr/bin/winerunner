@@ -7,6 +7,7 @@ FILE_PATH="$1"; [ -z "$FILE_PATH" ] && echo "[ERROR] No Windows executable speci
 
 # If "$FILE_PATH" exists, check it's type
 if [ -f "$FILE_PATH" ]; then
+	FILE_PATH="$(readlink -f "$FILE_PATH")"
 	if (file "$FILE_PATH" | grep "MS-DOS executable" &> /dev/null); then FILE_TYPE="dos"
 	elif (file "$FILE_PATH" | grep "PE32 executable" &> /dev/null); then FILE_TYPE="win"; WINEARCH="win32"
 	elif (file "$FILE_PATH" | grep "PE32+ executable" &> /dev/null); then FILE_TYPE="win"; WINEARCH="win64"
@@ -16,6 +17,8 @@ if [ -f "$FILE_PATH" ]; then
 		else FILE_TYPE="win"; fi
 	# If file type cannot be determined, assume Windows executable
 	else FILE_TYPE="win"; fi
+	# Get containing folder
+	FILE_DIR="$(echo "$FILE_PATH" | cut -c -$(expr $(echo "$FILE_PATH" | wc -c) - $(basename "$FILE_PATH" | wc -c) - 1))"
 # If "$FILE_PATH" does not exist, assume that we want to run a Wine system application
 else FILE_TYPE="win"; fi
 
@@ -23,19 +26,35 @@ else FILE_TYPE="win"; fi
 if [ "$FILE_TYPE" != "dos" ]; then
 	if [ -z "$WINEPREFIX" ]; then
 		[ "$WINEARCH" == "win32" ] && WINEPREFIX="$HOME/.wine32" || WINEPREFIX="$HOME/.wine"
-	fi; [ ! -d "$WINEPREFIX" ] && echo "Creating Wine prefix..." && wineboot -u
+	fi
+	[ ! -d "$WINEPREFIX" ] && echo "Creating Wine prefix..." && env WINEARCH="$WINEARCH" WINEPREFIX="$WINEPREFIX" wineboot -u
 fi
 
 # Install DXVK and VKD3D if not installed
-if [ ! -f "$WINEPREFIX/drive_c/windows/system32/dxgi.dll.old" ] && \
-[ ! -f "$WINEPREFIX/drive_c/windows/system32/d3d8.dll.old" ] && \
-[ ! -f "$WINEPREFIX/drive_c/windows/system32/d3d9.dll.old" ] && \
-[ ! -f "$WINEPREFIX/drive_c/windows/system32/d3d10core.dll.old" ] && \
-[ ! -f "$WINEPREFIX/drive_c/windows/system32/d3d811.dll.old" ]
-then echo "Installing DXVK..."; setup_dxvk install; fi
-if [ ! -f "$WINEPREFIX/drive_c/windows/system32/d3d12.dll.old" ] && \
-[ ! -f "$WINEPREFIX/drive_c/windows/system32/d3d12core.dll" ]
-then echo "Installing VKD3D..."; setup_vkd3d_proton install; fi
+if [ "$WINEARCH" == "win32" ]; then
+	for DLL_FILE in $(ls /usr/share/dxvk/x32/*.dll); do
+		ln -sf $DLL_FILE "$WINEPREFIX/drive_c/windows/system32/$(basename "$DLL_FILE")"
+	done; for DLL_FILE in $(ls /usr/share/vkd3d-proton/x86/*.dll); do
+		ln -sf $DLL_FILE "$WINEPREFIX/drive_c/windows/system32/$(basename "$DLL_FILE")"
+	done
+else
+	for DLL_FILE in $(ls /usr/share/dxvk/x32/*.dll); do
+		ln -sf $DLL_FILE "$WINEPREFIX/drive_c/windows/syswow64/$(basename "$DLL_FILE")"
+	done; for DLL_FILE in $(ls /usr/share/dxvk/x64/*.dll); do
+		ln -sf $DLL_FILE "$WINEPREFIX/drive_c/windows/system32/$(basename "$DLL_FILE")"
+	done; for DLL_FILE in $(ls /usr/share/vkd3d-proton/x86/*.dll); do
+		ln -sf $DLL_FILE "$WINEPREFIX/drive_c/windows/syswow64/$(basename "$DLL_FILE")"
+	done; for DLL_FILE in $(ls /usr/share/vkd3d-proton/x64/*.dll); do
+		ln -sf $DLL_FILE "$WINEPREFIX/drive_c/windows/system32/$(basename "$DLL_FILE")"
+	done
+fi
 
 # Start wine
-wine $@
+CURRENT_DIR="$(pwd)"
+[ ! -z "$FILE_DIR" ] && cd "$FILE_DIR"
+echo "ARCH:       $WINEARCH"
+echo "WINEPREFIX: $WINEPREFIX"
+echo "ARGS:       $@"
+echo "DIR:        $FILE_DIR"
+env WINEARCH="$WINEARCH" WINEPREFIX="$WINEPREFIX" wine $@
+cd $CURRENT_DIR
