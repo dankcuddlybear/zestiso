@@ -35,6 +35,7 @@ depends=(bundle-media-codecs
 	wine-gecko
 	wine-mono
 	wine-nine
+	winerunner
 	#winesync-dkms
 	#winesync-header
 	#winesync-udev-rule

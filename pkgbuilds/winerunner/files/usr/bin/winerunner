@@ -1,0 +1,41 @@
+#!/bin/sh
+FILE_PATH="$1"; [ -z "$FILE_PATH" ] && echo "[ERROR] No Windows executable specified" && exit 1
+[ -z "$WINEARCH" ] && WINEARCH=win64; [ "$WINEARCH" != "win32" ] && WINEARCH=win64
+
+# If "$FILE_PATH" not found but "$FILE_PATH.exe" found, change "$FILE_PATH" to "$FILE_PATH.exe"
+[ ! -f "$FILE_PATH" ] && [ -f "$FILE_PATH.exe" ] && FILE_PATH="$FILE_PATH.exe"
+
+# If "$FILE_PATH" exists, check it's type
+if [ -f "$FILE_PATH" ]; then
+	if (file "$FILE_PATH" | grep "MS-DOS executable" &> /dev/null); then FILE_TYPE="dos"
+	elif (file "$FILE_PATH" | grep "PE32 executable" &> /dev/null); then FILE_TYPE="win"; WINEARCH="win32"
+	elif (file "$FILE_PATH" | grep "PE32+ executable" &> /dev/null); then FILE_TYPE="win"; WINEARCH="win64"
+	elif (file "$FILE_PATH" | grep "MSI Installer" &> /dev/null); then
+		if (file "$FILE_PATH" | grep "Template: Intel" &> /dev/null); then FILE_TYPE="win"; WINEARCH="win32"
+		elif (file "$FILE_PATH" | grep "Template: x64" &> /dev/null); then FILE_TYPE="win"; WINEARCH="win64"
+		else FILE_TYPE="win"; fi
+	# If file type cannot be determined, assume Windows executable
+	else FILE_TYPE="win"; fi
+# If "$FILE_PATH" does not exist, assume that we want to run a Wine system application
+else FILE_TYPE="win"; fi
+
+# Create Wine prefix if not found
+if [ "$FILE_TYPE" != "dos" ]; then
+	if [ -z "$WINEPREFIX" ]; then
+		[ "$WINEARCH" == "win32" ] && WINEPREFIX="$HOME/.wine32" || WINEPREFIX="$HOME/.wine"
+	fi; [ ! -d "$WINEPREFIX" ] && echo "Creating Wine prefix..." && wineboot -u
+fi
+
+# Install DXVK and VKD3D if not installed
+if [ ! -f "$WINEPREFIX/drive_c/windows/system32/dxgi.dll.old" ] && \
+[ ! -f "$WINEPREFIX/drive_c/windows/system32/d3d8.dll.old" ] && \
+[ ! -f "$WINEPREFIX/drive_c/windows/system32/d3d9.dll.old" ] && \
+[ ! -f "$WINEPREFIX/drive_c/windows/system32/d3d10core.dll.old" ] && \
+[ ! -f "$WINEPREFIX/drive_c/windows/system32/d3d811.dll.old" ]
+then echo "Installing DXVK..."; setup_dxvk install; fi
+if [ ! -f "$WINEPREFIX/drive_c/windows/system32/d3d12.dll.old" ] && \
+[ ! -f "$WINEPREFIX/drive_c/windows/system32/d3d12core.dll" ]
+then echo "Installing VKD3D..."; setup_vkd3d_proton install; fi
+
+# Start wine
+wine $@
