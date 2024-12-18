@@ -26,7 +26,7 @@ else FILE_TYPE="win"; fi
 if [ "$FILE_TYPE" != "dos" ]; then
 	if [ -z "$WINEPREFIX" ]; then
 		[ "$WINEARCH" == "win32" ] && WINEPREFIX="$HOME/.wine32" || WINEPREFIX="$HOME/.wine"
-	fi; "Initialising Wine prefix..." && env WINEARCH="$WINEARCH" WINEPREFIX="$WINEPREFIX" wineboot
+	fi; env WINEARCH="$WINEARCH" WINEPREFIX="$WINEPREFIX" wineboot
 fi
 
 # Install DXVK and VKD3D if not installed
@@ -51,9 +51,5 @@ fi
 # Start wine
 CURRENT_DIR="$(pwd)"
 [ ! -z "$FILE_DIR" ] && cd "$FILE_DIR"
-echo "ARCH:       $WINEARCH"
-echo "WINEPREFIX: $WINEPREFIX"
-echo "ARGS:       $@"
-echo "DIR:        $FILE_DIR"
-env WINEARCH="$WINEARCH" WINEPREFIX="$WINEPREFIX" wine $@
-cd $CURRENT_DIR
+IFS=; env WINEARCH="$WINEARCH" WINEPREFIX="$WINEPREFIX" wine $@
+cd "$CURRENT_DIR"
