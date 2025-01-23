@@ -1,2 +1,2 @@
 #!/bin/sh
-plymouth-set-default-theme -R arch-breeze
+plymouth-set-default-theme arch-breeze
