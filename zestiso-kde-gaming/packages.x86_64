@@ -1,3 +1,6 @@
+## DO NOT REMOVE - pacman should be installed first as some package install scripts rely upon it.
+pacman
+
 ## Linux kernel and headers
 linux-zen
 linux-zen-headers
