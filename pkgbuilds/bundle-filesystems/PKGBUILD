@@ -11,9 +11,7 @@ depends=(
 	cryptsetup
 	dmraid
 	dosfstools
-	e2fsprogs
 	exfatprogs
-	f2fs-tools
 	fscrypt
 	lvm2
 	mdadm

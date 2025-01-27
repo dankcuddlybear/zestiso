@@ -15,35 +15,22 @@ ntfs-3g
 qt6-multimedia-gstreamer
 phonon-qt6-gstreamer-git
 
-## Add your packages here
-grub
-lib32-mangohud
-mangohud
-nano
-os-prober
-testdisk
-
-## Add your graphical applications here
-firefox-i18n-en-gb
-gparted
-libreoffice-fresh-en-gb
-obs-studio
-#octopi
-qbittorrent
-vlc
-
 ## ZestISO all-in-one software bundles
 arch-tweaks
 bundle-archives
 bundle-bluetooth
 bundle-cli-utils
-bundle-desktop
+#bundle-desktop
 bundle-filesystems
 bundle-media-codecs
 #bundle-modemmanager
 bundle-networking
 bundle-printing
 bundle-wine
+
+## Extra filesystems and file types
+exfatprogs
+ntfs-3g
 
 ## GPU drivers
 bundle-amd-gpu
@@ -64,6 +51,13 @@ pipewire-roc
 pipewire-v4l2
 pipewire-zeroconf
 wireplumber
+
+## Compilers and extra software repositories
+base-devel
+chaotic-keyring
+chaotic-mirrorlist
+git
+yay
 
 ## Uncomment for KDE Plasma desktop environment
 bundle-kde
@@ -107,22 +101,28 @@ spectacle
 sweeper
 yakuake
 
-## Gaming
-proton-ge-custom
-steam-native-runtime
-
-## Wallpapers and themes
+## Themes
 fruit-cursors
 plasma-colors-midnight
 plymouth-theme-breeze
 zestiso-branding
 
-## Compilers and extra software repositories
-base-devel
-chaotic-keyring
-chaotic-mirrorlist
-git
-yay
+## Gaming and streaming
+lib32-mangohud
+mangohud
+obs-studio
+steam-native-runtime
+
+## Add your extra packages here
+firefox-i18n-en-gb
+gparted
+libreoffice-fresh-en-gb
+nano
+#octopi
+os-prober
+qbittorrent
+testdisk
+vlc
 
 
 
@@ -133,6 +133,7 @@ arch-install-scripts
 archinstall
 #
 ## DO NOT REMOVE - Essential ArchISO packages
+grub
 mkinitcpio-archiso
 pv
 syslinux

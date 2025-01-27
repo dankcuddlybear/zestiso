@@ -1,5 +1,5 @@
 # ZestISO
-ZestISO is a free Arch Linux based OS, as well as a collection of tools to create your own Arch Linux based OS. ZestISO makes installing Linux a breeze. You can install it on as many devices as you want, and each one will be set-up and ready to go with your favourite software and settings.
+Are you tired of Windows or MacOS being slow and breaking all the time? You've probably considered switching to Linux, but you don't know if it's right for you. Introducing ZestISO: A free and easy to use Arch Linux based OS. ZestISO features an easy to use graphical installer and comes bundled with a desktop environment, basic utilities, networking and device drivers as well as performance and security optimisations. It is designed to be small, fast and secure. Your data will never be collected or shared, ever.
 
 ## About ZestISO
 Arch Linux is a highly customisable Linux distribution that aims to keep it simple. You install the system yourself from scratch, choosing whatever software packages you need, and configure it afterwards for your specific use case. This is a very hands on approach that may not be for everyone. It is very time consuming, especially if you need to install it on multiple machines, or if you need to reinstall Arch Linux for some reason. It's easy to forget things, and you may find yourself spending more time troubleshooting issues.
@@ -8,12 +8,52 @@ ZestISO was created to make installing Arch Linux quick and easy, while still be
 
 ## ZestISO software repositories
 In the ZestISO software repositories, you'll find custom software packages and bundles to help you quickly and easily install and configure software and services. Each package includes all the necessary components required for use, and when installed, will set up everything for you. There is no need to do anything manually, just install the package and you're done.
-Here are some of the packages available:
- - Networking
- - Cellular modems
- - Bluetooth
- - Printing and scanning
- - A choice of graphical desktop environments including KDE Plasma and XFCE (sorry, those are the only ones right now).
+[Desktop environments]
+ - bundle-kde: KDE Plasma desktop environment
+ - bundle-xfce: XFCE lightweight desktop environment
+ - zetiso-config-kde: Custom configuration for ZestISO KDE Plasma
+ - zestiso-config-kde-gaming: Custom configuration for ZestISO KDE Plasma Gaming Edition
+[Drivers]
+bundle-amd-gpu: AMD GPU drivers
+bundle-bluetooth: Bluetooth drivers
+bundle-intel-gpu: Intel GPU drivers
+bundle-modemmanager: Mobile networking drivers
+bundle-networking: Networking drivers
+bundle-nvidia-foss: NVIDIA GPU open source drivers
+bundle-nvidia-pro: NVIDIA GPU proprietary drivers (latest version)
+bundle-nvidia-pro-340xx: NVIDIA GPU proprietary drivers (version 340xx)
+bundle-nvidia-pro-390xx: NVIDIA GPU proprietary drivers (version 390xx)
+bundle-nvidia-pro-470xx: NVIDIA GPU proprietary drivers (version 470xx)
+bundle-nvidia-pro-525xx: NVIDIA GPU proprietary drivers (version 525xx)
+bundle-printing: Printing and scanning drivers
+[Extra functionality]
+arch-tweaks: Performance and convenience optimisations
+bashrc-d: Load bash configs from /etc/bashrc.d/
+bundle-archives: Support for extra compressed file types
+bundle-cli-utils: Useful command-line utilities
+bundle-desktop: Desktop utilities and software
+bundle-filesystems: Support for extra filesystems
+bundle-gvfs: Support for file and picture transfer in GTK based desktop environments like XFCE and GNOME
+bundle-media-codecs: Additional multimedia codecs
+bundle-wine: Support for Windows programs and games
+[Themes]
+fruit-cursors: Free open-source cursor theme inspired by a certain fruit-named company
+plasma-colors-midnight: Black and dark grey colour scheme for KDE Plasma
+plymouth-theme-arch-breeze: KDE Breeze Plymouth boot splash with Arch Linux logo
+plymouth-theme-breeze: KDE Breeze Plymouth boot splash
+plymouth-theme-zestiso-breeze: KDE Breeze Plymouth boot splash with ZestISO logo
+[Apps]
+winerunner: Automatically configure Wine while running Windows games and apps
+[Misc]
+zestiso-archiso-files: ZestISO live ISO installer files
+zestiso-branding: ZestISO OS branding
+
+## Getting ZestISO
+There are no online hosted images available to download (yet). You will have to build them yourself. Please read the next 2 sections for build instructions.
+zestiso-kde: ZestISO with KDE Plasma desktop environment and pre-installed applications
+zestiso-kde-gaming: ZestISO with KDE Plasma desktop environment and pre-installed applications for gaming and streaming
+zestiso-kde-lite: Arch Linux with KDE Plasma desktop environment and minimal set of pre-installed applications
+zestiso-xfce: ZestISO with XFCE lightweight desktop environment and pre-installed applications
 
 ## How the build process works
 The official Arch Linux releases are built with archiso, so this is what I am using for ZestISO. Archiso reads a custom profile (preset) and builds the ISO (the Arch Linux boot/install media).
@@ -35,12 +75,9 @@ git clone https://github.com/dankcuddlybear/zestiso.git
 cd zestiso
 ```
 Then enter the folder for the ZestISO ArchISO preset you want to build:
+(currently available: zestiso-kde zestiso-kde-gaming zestiso-kde-lite zestiso-xfce zestiso-lite)
 ```
 cd zestiso-kde
-```
-or (not yet added)
-```
-cd zestiso-xfce
 ```
 3) To add or remove repositories, edit pacman.conf. This configuration file is only used to build the ISO. These repositories will not be available in the final image after booting. To add repositories to the final image, you need to edit airootfs/etc/pacman.conf.
 4) By default, the core, extra, multilib, zestiso and chaotic-aur repositories are enabled. For ArchISO the alci_repo repository is also enabled (needed for Calamares installer). If you want to use Chaotic-AUR, you will need to first add the keys and mirrorlist to your system:
