@@ -11,6 +11,7 @@ depends=(
 	bashrc-d
 	bundle-networking
 	efibootmgr
+	KSMBD-MODULE
 	linux-firmware
 	sudo
 	zestiso-branding

@@ -1,71 +1,29 @@
+## DO NOT REMOVE - pacman should be installed first as some package install scripts rely upon it.
+pacman
+
 ## Linux kernel and headers
 linux-zen
 linux-zen-headers
 
-## Custom defaults
-bash
-iptables-nft
-#lib32-sdl12-compat
-#libglvnd
-noto-fonts
-ntfs-3g
-qt6-multimedia-gstreamer
-phonon-qt6-gstreamer-git
-#wine-ge-custom
-
-## Add your packages here
-grub
-nano
-os-prober
-#testdisk
-
-## Add your graphical applications here
-firefox-i18n-en-gb
-#gparted
-#libreoffice-fresh-en-gb
-#octopi
-#vlc
-#gparted
-#qbittorrent
-
-## ZestISO all-in-one software bundles
-arch-tweaks
+## All-in-one software bundles for extra functionality
+bundle-desktop-utils
+#bundle-modemmanager
+#bundle-wine
+#arch-tweaks
 #bundle-archives
-bundle-bluetooth
-bundle-cli-utils
-bundle-desktop
+#bundle-bluetooth
+#bundle-cli-utils
 #bundle-filesystems
 #bundle-media-codecs
-#bundle-modemmanager
-bundle-networking
-bundle-printing
-#bundle-wine
+#bundle-networking
+#bundle-printing
 
-## GPU drivers
-bundle-amd-gpu
-bundle-intel-gpu
-bundle-nvidia-foss
-#bundle-nvidia-pro
-#bundle-nvidia-pro-340xx
-#bundle-nvidia-pro-390xx
-#bundle-nvidia-pro-470xx
-#bundle-nvidia-pro-525xx
-
-## Uncomment for Pipewire sound server
-lib32-pipewire-jack
-pipewire-alsa
-pipewire-jack
-pipewire-pulse
-pipewire-roc
-pipewire-v4l2
-pipewire-zeroconf
-wireplumber
-
-## Uncomment for KDE Plasma desktop environment
+## KDE Plasma desktop environment
 bundle-kde
-#zestiso-config-kde
+zestiso-config-kde
+#zestiso-config-kde-gaming
 
-## Uncomment for KDE applications
+## KDE applications
 ark
 discover
 dolphin
@@ -82,12 +40,12 @@ kcalc
 #kcolorchooser
 #kdeconnect
 #kdepim-addons
-#kdeplasma-addons
+kdeplasma-addons
 #kfind
 #kgpg
-khelpcenter
+#khelpcenter
 #kmail
-kolourpaint
+#kolourpaint
 konsole
 #krecorder
 #krename
@@ -103,10 +61,36 @@ spectacle
 #sweeper
 #yakuake
 
-## Wallpapers and themes
+## Gaming and streaming
+#lib32-mangohud
+#mangohud
+#obs-studio
+#steam-native-runtime
+
+## Themes
+fruit-cursors
 plasma-colors-midnight
 plymouth-theme-breeze
-#zestiso-branding
+
+## GPU drivers
+bundle-amd-gpu
+bundle-intel-gpu
+bundle-nvidia-foss
+#bundle-nvidia-pro
+#bundle-nvidia-pro-340xx
+#bundle-nvidia-pro-390xx
+#bundle-nvidia-pro-470xx
+#bundle-nvidia-pro-525xx
+
+## Pipewire sound server
+lib32-pipewire-jack
+pipewire-alsa
+pipewire-jack
+pipewire-pulse
+pipewire-roc
+pipewire-v4l2
+pipewire-zeroconf
+wireplumber
 
 ## Compilers and extra software repositories
 base-devel
@@ -114,6 +98,27 @@ chaotic-keyring
 chaotic-mirrorlist
 git
 yay
+
+## Custom defaults
+bash
+iptables-nft
+#lib32-sdl12-compat
+libglvnd
+noto-fonts
+ntfs-3g
+qt6-multimedia-gstreamer
+phonon-qt6-gstreamer-git
+
+## Extra packages
+firefox-i18n-en-gb
+#gparted
+#libreoffice-fresh-en-gb
+nano
+#octopi
+os-prober
+#qbittorrent
+#testdisk
+#vlc
 
 
 
@@ -123,18 +128,16 @@ alci-calamares
 arch-install-scripts
 archinstall
 #
-## DO NOT REMOVE - Essential ArchISO packages
+## Essential ArchISO packages
+grub
 mkinitcpio-archiso
 pv
 syslinux
 zestiso-archiso-files
 #
-## DO NOT REMOVE - Essential Arch Linux system packages
+## Essential ZestISO system packages
 amd-ucode
-base
-efibootmgr
 intel-ucode
-linux-firmware
 mkinitcpio
-sudo
 terminus-font
+zestiso-core

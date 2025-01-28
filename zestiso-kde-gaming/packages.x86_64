@@ -9,7 +9,6 @@ linux-zen-headers
 bundle-desktop-utils
 #bundle-modemmanager
 bundle-wine
-# Provided by bundle-desktop-utils
 #arch-tweaks
 #bundle-archives
 #bundle-bluetooth
