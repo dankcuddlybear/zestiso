@@ -5,6 +5,6 @@ Type = Path
 Target = usr/bin/wineserver
 
 [Action]
-Description = Stopping Wine from hijacking file associations...
+Description = Setting wineserver capabilities...
 When = PostTransaction
 Exec = /usr/share/libalpm/scripts/bundle-wine/setcap-wineserver
