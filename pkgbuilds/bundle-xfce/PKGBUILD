@@ -10,7 +10,6 @@ depends=(
 	adwaita-qt5
 	adwaita-qt6
 	blueman
-	bundle-desktop
 	bundle-gvfs
 	gnu-free-fonts
 	lightdm-gtk-greeter

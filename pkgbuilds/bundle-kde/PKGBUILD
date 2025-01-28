@@ -8,7 +8,6 @@ arch=(any)
 url='https://github.com/dankcuddlybear/zestiso'
 depends=(bluedevil
 	breeze-gtk
-	bundle-desktop
 	colord-kde
 	drkonqi
 	ebook-tools
