@@ -190,8 +190,8 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][49][Wallpaper][org.kde.image][General]
-Image=/usr/share/wallpapers/default-wallpaper.jpg
-PreviewImage=/usr/share/wallpapers/default-wallpaper.jpg
+Image=/usr/share/wallpapers/default-wallpaper.png
+PreviewImage=/usr/share/wallpapers/default-wallpaper.png
 SlidePaths=/usr/share/wallpapers/
 
 [ScreenMapping]

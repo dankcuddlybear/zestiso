@@ -3,5 +3,5 @@ Autolock=false
 Timeout=0
 
 [Greeter][Wallpaper][org.kde.image][General]
-Image=/usr/share/wallpapers/default-wallpaper.jpg
-PreviewImage=/usr/share/wallpapers/default-wallpaper.jpg
+Image=/usr/share/wallpapers/default-wallpaper.png
+PreviewImage=/usr/share/wallpapers/default-wallpaper.png
