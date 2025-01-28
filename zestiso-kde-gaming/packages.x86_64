@@ -5,65 +5,26 @@ pacman
 linux-zen
 linux-zen-headers
 
-## Custom defaults
-bash
-iptables-nft
-lib32-sdl12-compat
-libglvnd
-noto-fonts
-ntfs-3g
-qt6-multimedia-gstreamer
-phonon-qt6-gstreamer-git
-
-## ZestISO all-in-one software bundles
-arch-tweaks
-bundle-archives
-bundle-bluetooth
-bundle-cli-utils
-#bundle-desktop
-bundle-filesystems
-bundle-media-codecs
+## All-in-one software bundles for extra functionality
+bundle-desktop-utils
 #bundle-modemmanager
-bundle-networking
-bundle-printing
 bundle-wine
+# Provided by bundle-desktop-utils
+#arch-tweaks
+#bundle-archives
+#bundle-bluetooth
+#bundle-cli-utils
+#bundle-filesystems
+#bundle-media-codecs
+#bundle-networking
+#bundle-printing
 
-## Extra filesystems and file types
-exfatprogs
-ntfs-3g
-
-## GPU drivers
-bundle-amd-gpu
-bundle-intel-gpu
-bundle-nvidia-foss
-#bundle-nvidia-pro
-#bundle-nvidia-pro-340xx
-#bundle-nvidia-pro-390xx
-#bundle-nvidia-pro-470xx
-#bundle-nvidia-pro-525xx
-
-## Uncomment for Pipewire sound server
-lib32-pipewire-jack
-pipewire-alsa
-pipewire-jack
-pipewire-pulse
-pipewire-roc
-pipewire-v4l2
-pipewire-zeroconf
-wireplumber
-
-## Compilers and extra software repositories
-base-devel
-chaotic-keyring
-chaotic-mirrorlist
-git
-yay
-
-## Uncomment for KDE Plasma desktop environment
+## KDE Plasma desktop environment
 bundle-kde
+#zestiso-config-kde
 zestiso-config-kde-gaming
 
-## Uncomment for KDE applications
+## KDE applications
 ark
 discover
 dolphin
@@ -101,19 +62,55 @@ spectacle
 sweeper
 yakuake
 
-## Themes
-fruit-cursors
-plasma-colors-midnight
-plymouth-theme-breeze
-zestiso-branding
-
 ## Gaming and streaming
 lib32-mangohud
 mangohud
 obs-studio
 steam-native-runtime
 
-## Add your extra packages here
+## Themes
+fruit-cursors
+plasma-colors-midnight
+plymouth-theme-breeze
+
+## GPU drivers
+bundle-amd-gpu
+bundle-intel-gpu
+bundle-nvidia-foss
+#bundle-nvidia-pro
+#bundle-nvidia-pro-340xx
+#bundle-nvidia-pro-390xx
+#bundle-nvidia-pro-470xx
+#bundle-nvidia-pro-525xx
+
+## Pipewire sound server
+lib32-pipewire-jack
+pipewire-alsa
+pipewire-jack
+pipewire-pulse
+pipewire-roc
+pipewire-v4l2
+pipewire-zeroconf
+wireplumber
+
+## Compilers and extra software repositories
+base-devel
+chaotic-keyring
+chaotic-mirrorlist
+git
+yay
+
+## Custom defaults
+bash
+iptables-nft
+lib32-sdl12-compat
+libglvnd
+noto-fonts
+ntfs-3g
+qt6-multimedia-gstreamer
+phonon-qt6-gstreamer-git
+
+## Extra packages
 firefox-i18n-en-gb
 gparted
 libreoffice-fresh-en-gb
@@ -132,19 +129,16 @@ alci-calamares
 arch-install-scripts
 archinstall
 #
-## DO NOT REMOVE - Essential ArchISO packages
+## Essential ArchISO packages
 grub
 mkinitcpio-archiso
 pv
 syslinux
 zestiso-archiso-files
 #
-## DO NOT REMOVE - Essential Arch Linux system packages
+## Essential ZestISO system packages
 amd-ucode
-base
-efibootmgr
 intel-ucode
-linux-firmware
 mkinitcpio
-sudo
 terminus-font
+zestiso-core
