@@ -26,6 +26,3 @@ cp -f /etc/mkinitcpio.conf.system /etc/mkinitcpio.conf
 ## Delete hooks/scripts only used for ArchISO image generation
 rm -f /etc/pacman.d/hooks/zzzz-archiso-setup.hook
 rm -f /etc/pacman.d/scripts/archiso-setup.sh
-
-## Return success
-return 0
