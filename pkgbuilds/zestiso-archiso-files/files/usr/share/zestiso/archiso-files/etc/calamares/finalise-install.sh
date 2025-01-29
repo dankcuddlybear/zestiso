@@ -18,6 +18,9 @@ echo "default_image=\"/boot/initramfs-$KERNEL_NAME.img\"" >> /etc/mkinitcpio.d/$
 echo "#default_uki=\"/efi/EFI/Linux/arch-$KERNEL_NAME.efi\"" >> /etc/mkinitcpio.d/$KERNEL_NAME.preset
 echo "#default_options=\"--splash /usr/share/systemd/bootctl/splash-arch.bmp\"" >> /etc/mkinitcpio.d/$KERNEL_NAME.preset
 
+## Configure mkinitcpio
+rm -f /etc/mkinitcpio.conf.system
+
 ## Remove unnecessary services
 echo "Removing unnecessary packages..."
 if (! (lspci | grep -i "VMware" &> /dev/null)) && \
