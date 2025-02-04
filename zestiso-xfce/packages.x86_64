@@ -97,16 +97,15 @@ yay
 
 ## Custom defaults
 bash
+gnu-free-fonts
 iptables-nft
 lib32-sdl12-compat
 libglvnd
-noto-fonts
 ntfs-3g
-qt6-multimedia-gstreamer
-phonon-qt6-gstreamer-git
 
 ## Extra packages
 firefox-i18n-en-gb
+firefox-ublock-origin
 gparted
 libreoffice-fresh-en-gb
 nano

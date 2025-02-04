@@ -29,22 +29,32 @@ if [ "$FILE_TYPE" != "dos" ]; then
 	fi; env WINEARCH="$WINEARCH" WINEPREFIX="$WINEPREFIX" wineboot
 fi
 
-# Install DXVK and VKD3D if not installed
-if [ "$WINEARCH" == "win32" ]; then
+## Install DXVK and VKD3D
+if [ "$WINEARCH" == "win32" ]; then # 32-bit
+	# Install DXVK
 	for DLL_FILE in $(ls /usr/share/dxvk/x32/*.dll); do
-		ln -sf $DLL_FILE "$WINEPREFIX/drive_c/windows/system32/$(basename "$DLL_FILE")"
-	done; for DLL_FILE in $(ls /usr/share/vkd3d-proton/x86/*.dll); do
-		ln -sf $DLL_FILE "$WINEPREFIX/drive_c/windows/system32/$(basename "$DLL_FILE")"
+		ln -sf "$DLL_FILE" "$WINEPREFIX/drive_c/windows/system32/$(basename "$DLL_FILE")"
 	done
-else
+	# Install VKD3D
+	for DLL_FILE in $(ls /usr/share/vkd3d-proton/x86/*.dll); do
+		ln -sf "$DLL_FILE" "$WINEPREFIX/drive_c/windows/system32/$(basename "$DLL_FILE")"
+	done
+else # 64-bit
+	# Install DXVK (x64 native)
+	for DLL_FILE in $(ls /usr/share/dxvk/x64/*.dll); do
+		ln -sf "$DLL_FILE" "$WINEPREFIX/drive_c/windows/system32/$(basename "$DLL_FILE")"
+	done
+	# Install DXVK (WOW64)
 	for DLL_FILE in $(ls /usr/share/dxvk/x32/*.dll); do
-		ln -sf $DLL_FILE "$WINEPREFIX/drive_c/windows/syswow64/$(basename "$DLL_FILE")"
-	done; for DLL_FILE in $(ls /usr/share/dxvk/x64/*.dll); do
-		ln -sf $DLL_FILE "$WINEPREFIX/drive_c/windows/system32/$(basename "$DLL_FILE")"
-	done; for DLL_FILE in $(ls /usr/share/vkd3d-proton/x86/*.dll); do
-		ln -sf $DLL_FILE "$WINEPREFIX/drive_c/windows/syswow64/$(basename "$DLL_FILE")"
-	done; for DLL_FILE in $(ls /usr/share/vkd3d-proton/x64/*.dll); do
-		ln -sf $DLL_FILE "$WINEPREFIX/drive_c/windows/system32/$(basename "$DLL_FILE")"
+		ln -sf "$DLL_FILE" "$WINEPREFIX/drive_c/windows/syswow64/$(basename "$DLL_FILE")"
+	done
+	# Install VKD3D (x64 native)
+	for DLL_FILE in $(ls /usr/share/vkd3d-proton/x64/*.dll); do
+		ln -sf "$DLL_FILE" "$WINEPREFIX/drive_c/windows/system32/$(basename "$DLL_FILE")"
+	done
+	# Install VKD3D (WOW64)
+	for DLL_FILE in $(ls /usr/share/vkd3d-proton/x86/*.dll); do
+		ln -sf "$DLL_FILE" "$WINEPREFIX/drive_c/windows/syswow64/$(basename "$DLL_FILE")"
 	done
 fi
 
