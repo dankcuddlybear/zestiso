@@ -15,47 +15,47 @@ if [ -f "$FILE_PATH" ]; then
 		if (file "$FILE_PATH" | grep "Template: Intel" &> /dev/null); then FILE_TYPE="win"; WINEARCH="win32"
 		elif (file "$FILE_PATH" | grep "Template: x64" &> /dev/null); then FILE_TYPE="win"; WINEARCH="win64"
 		else FILE_TYPE="win"; fi
-	# If file type cannot be determined, assume Windows executable
-	else FILE_TYPE="win"; fi
-	# Get containing folder
-	FILE_DIR="$(echo "$FILE_PATH" | cut -c -$(expr $(echo "$FILE_PATH" | wc -c) - $(basename "$FILE_PATH" | wc -c) - 1))"
-# If "$FILE_PATH" does not exist, assume that we want to run a Wine system application
-else FILE_TYPE="win"; fi
+	else FILE_TYPE="win"; fi # If file type cannot be determined, assume Windows executable
+	FILE_DIR="$(echo "$FILE_PATH" | cut -c -$(expr $(echo "$FILE_PATH" | wc -c) - $(basename "$FILE_PATH" | wc -c) - 1))" # Get parent dir
+else FILE_TYPE="win"; fi # If "$FILE_PATH" does not exist, assume that we want to run a Wine system application
 
-# Create Wine prefix if not found
-if [ "$FILE_TYPE" != "dos" ]; then
+# Update Wine prefix
+if [ "$FILE_TYPE" == "win" ]; then
+	# Create prefix if it doesn't exist
 	if [ -z "$WINEPREFIX" ]; then
-		[ "$WINEARCH" == "win32" ] && WINEPREFIX="$HOME/.wine32" || WINEPREFIX="$HOME/.wine"
+		if [ "$WINEARCH" == "win32" ]; then WINEPREFIX="$HOME/.wine32"
+		else WINEPREFIX="$HOME/.wine"; fi
 	fi; env WINEARCH="$WINEARCH" WINEPREFIX="$WINEPREFIX" wineboot
-fi
 
-## Install DXVK and VKD3D
-if [ "$WINEARCH" == "win32" ]; then # 32-bit
-	# Install DXVK
-	for DLL_FILE in $(ls /usr/share/dxvk/x32/*.dll); do
-		ln -sf "$DLL_FILE" "$WINEPREFIX/drive_c/windows/system32/$(basename "$DLL_FILE")"
-	done
-	# Install VKD3D
-	for DLL_FILE in $(ls /usr/share/vkd3d-proton/x86/*.dll); do
-		ln -sf "$DLL_FILE" "$WINEPREFIX/drive_c/windows/system32/$(basename "$DLL_FILE")"
-	done
-else # 64-bit
-	# Install DXVK (x64 native)
-	for DLL_FILE in $(ls /usr/share/dxvk/x64/*.dll); do
-		ln -sf "$DLL_FILE" "$WINEPREFIX/drive_c/windows/system32/$(basename "$DLL_FILE")"
-	done
-	# Install DXVK (WOW64)
-	for DLL_FILE in $(ls /usr/share/dxvk/x32/*.dll); do
-		ln -sf "$DLL_FILE" "$WINEPREFIX/drive_c/windows/syswow64/$(basename "$DLL_FILE")"
-	done
-	# Install VKD3D (x64 native)
-	for DLL_FILE in $(ls /usr/share/vkd3d-proton/x64/*.dll); do
-		ln -sf "$DLL_FILE" "$WINEPREFIX/drive_c/windows/system32/$(basename "$DLL_FILE")"
-	done
-	# Install VKD3D (WOW64)
-	for DLL_FILE in $(ls /usr/share/vkd3d-proton/x86/*.dll); do
-		ln -sf "$DLL_FILE" "$WINEPREFIX/drive_c/windows/syswow64/$(basename "$DLL_FILE")"
-	done
+	# Get installed DXVK and VKD3D pacman package version
+	DXVK_PKG_VERSION_LINE_NO="$(expr "$(cat ""$(ls -d /var/lib/pacman/local/dxvk-async-git-*)"/desc" | grep -nm1 "%VERSION%" | cut -d ':' -f 1)" + 1 )"
+	DXVK_VERSION="$(sed -n "${DXVK_PKG_VERSION_LINE_NO}p" ""$(ls -d /var/lib/pacman/local/dxvk-async-git-*)"/desc")"
+	VKD3D_PKG_VERSION_LINE_NO="$(expr "$(cat ""$(ls -d /var/lib/pacman/local/vkd3d-proton-mingw-git-*)"/desc" | grep -nm1 "%VERSION%" | cut -d ':' -f 1)" + 1 )"
+	VKD3D_VERSION="$(sed -n "${VKD3D_PKG_VERSION_LINE_NO}p" ""$(ls -d /var/lib/pacman/local/vkd3d-proton-mingw-git-*)"/desc")"
+
+	# Check Wine prefix DXVK version
+	UPDATE_DXVK=0; if [ -f "$WINEPREFIX/drive_c/windows/system32/.dxvk.ver" ]; then
+		if [ "$(vercmp "$DXVK_VERSION" "$(cat "$WINEPREFIX/drive_c/windows/system32/.dxvk.ver")")" == 1 ]; then
+			UPDATE_DXVK=1
+		fi; echo "$DXVK_VERSION" > "$WINEPREFIX/drive_c/windows/system32/.dxvk.ver"
+	else
+		echo "$DXVK_VERSION" > "$WINEPREFIX/drive_c/windows/system32/.dxvk.ver"
+		UPDATE_DXVK=1
+	fi
+	# Check Wine prefix VKD3D version
+	UPDATE_VKD3D=0; if [ -f "$WINEPREFIX/drive_c/windows/system32/.vkd3d.ver" ]; then
+		if [ "$(vercmp "$VKD3D_VERSION" "$(cat "$WINEPREFIX/drive_c/windows/system32/.vkd3d.ver")")" == 1 ]; then
+			UPDATE_VKD3D=1
+		fi; echo "$VKD3D_VERSION" > "$WINEPREFIX/drive_c/windows/system32/.vkd3d.ver"
+	else
+		echo "$VKD3D_VERSION" > "$WINEPREFIX/drive_c/windows/system32/.vkd3d.ver"
+		UPDATE_VKD3D=1
+	fi
+
+	# Update Wine prefix DXVK
+	if [ "$UPDATE_DXVK" == 1 ]; then env WINEARCH="$WINEARCH" WINEPREFIX="$WINEPREFIX" setup_dxvk install; fi
+	# Update Wine prefix VKD3D
+	if [ "$UPDATE_VKD3D" == 1 ]; then env WINEARCH="$WINEARCH" WINEPREFIX="$WINEPREFIX" setup_vkd3d_proton install; fi
 fi
 
 # Start wine
