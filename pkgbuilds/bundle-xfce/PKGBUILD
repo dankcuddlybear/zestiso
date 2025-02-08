@@ -12,6 +12,7 @@ depends=(
 	blueman
 	bundle-gvfs
 	gnu-free-fonts
+	light-locker
 	lightdm-gtk-greeter
 	menulibre
 	mugshot

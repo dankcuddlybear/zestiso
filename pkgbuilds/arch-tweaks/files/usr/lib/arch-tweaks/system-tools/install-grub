@@ -5,9 +5,6 @@ Error() {
 	exit 1
 }
 
-# If GRUB is not installed on /boot partition, quit
-[ ! -d /boot/grub ] && exit 0
-
 [ $(whoami) != root ] && Error "You must run this script with root priviliges."
 [ -z "$1" ] && Error "No command (install/upgrade/uninstall)"
 ARCH="$(uname -m)"
@@ -114,9 +111,10 @@ case "$1" in
 			echo "Upgrading GRUB boot loader successfully."
 			Upgrade && grub-mkconfig -o /boot/grub/grub.cfg && \
 			echo "Upgraded GRUB boot loader successfully."
-		fi;;
+		else echo "Directory /boot/grub not found, please install GRUB first."; fi;;
 	help|--help|-h) Help;;
 	uninstall)
-		echo "Not yet implemented";;
+		rm -rf /boot/grub /boot/efi/grub /boot/EFI/grub /boot/efi/GRUB /boot/EFI/GRUB
+		echo "Uninstalled GRUB boot loader successfully.";;
 	*) Error "Unrecognised command \"$1\"";;
 esac
