@@ -1,5 +1,5 @@
 # Maintainer: Dankcuddlybear <dankcuddlybear@proton.me>
-pkgname=zestiso-archiso-files
+pkgname=zestiso-archiso-files-dev
 pkgver=$(date +%Y.%-m.%-d)
 pkgrel=$(expr $(date +%-S) + $(expr 60 \* $(date +%-M)) + $(expr 3600 \* $(date +%-H)))
 pkgdesc='ZestISO archiso files'
