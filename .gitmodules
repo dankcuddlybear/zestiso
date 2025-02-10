@@ -1,0 +1,3 @@
+[submodule "pkgbuilds/boost1.86"]
+	path = pkgbuilds/boost1.86
+	url = https://aur.archlinux.org/boost1.86.git

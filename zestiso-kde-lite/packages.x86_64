@@ -127,6 +127,7 @@ os-prober
 alci-calamares
 arch-install-scripts
 archinstall
+boost1.86-libs
 #
 ## Essential ArchISO packages
 grub
