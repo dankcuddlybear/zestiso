@@ -1,0 +1,145 @@
+## DO NOT REMOVE - pacman should be installed first as some package install scripts rely upon it.
+pacman
+
+## Linux kernel and headers
+linux-zen
+linux-zen-headers
+
+## All-in-one software bundles for extra functionality
+bundle-desktop-utils
+#bundle-modemmanager
+bundle-wine
+#arch-tweaks
+#bundle-archives
+#bundle-bluetooth
+#bundle-cli-utils
+#bundle-filesystems
+#bundle-media-codecs
+#bundle-networking
+#bundle-printing
+
+## KDE Plasma desktop environment
+bundle-kde
+#zestiso-config-kde
+zestiso-config-kde-gaming
+
+## KDE applications
+ark
+discover
+dolphin
+dolphin-plugins
+filelight
+gwenview
+isoimagewriter
+#kalarm
+#kamoso
+kate
+kbackup
+kcalc
+kcharselect
+kcolorchooser
+kdeconnect
+#kdepim-addons
+kdeplasma-addons
+kfind
+kgpg
+khelpcenter
+#kmail
+kolourpaint
+konsole
+#krecorder
+krename
+#ktimer
+#ktorrent
+kwalletmanager
+okteta
+okular
+packagekit-qt6
+plasma-systemmonitor
+plasma-vault
+spectacle
+sweeper
+yakuake
+
+## Gaming and streaming
+lib32-mangohud
+mangohud
+obs-studio
+steam-native-runtime
+
+## Themes
+fruit-cursors
+plasma-colors-midnight
+plymouth-theme-breeze
+
+## GPU drivers
+bundle-amd-gpu
+bundle-intel-gpu
+bundle-nvidia-foss
+#bundle-nvidia-pro
+#bundle-nvidia-pro-340xx
+#bundle-nvidia-pro-390xx
+#bundle-nvidia-pro-470xx
+#bundle-nvidia-pro-525xx
+
+## Pipewire sound server
+lib32-pipewire-jack
+pipewire-alsa
+pipewire-jack
+pipewire-pulse
+pipewire-roc
+pipewire-v4l2
+pipewire-zeroconf
+wireplumber
+
+## Compilers and extra software repositories
+base-devel
+chaotic-keyring
+chaotic-mirrorlist
+git
+yay
+
+## Custom defaults
+bash
+iptables-nft
+lib32-sdl12-compat
+libglvnd
+noto-fonts
+ntfs-3g
+qt6-multimedia-gstreamer
+phonon-qt6-gstreamer-git
+
+## Extra packages
+firefox-i18n-en-gb
+firefox-ublock-origin
+gparted
+libreoffice-fresh-en-gb
+nano
+#octopi
+os-prober
+qbittorrent
+testdisk
+vlc
+
+
+
+#### DO NOT EDIT THE FOLLOWING SECTION ####
+## Installer (will be removed after installation)
+alci-calamares
+arch-install-scripts
+archinstall
+boost1.86-libs
+#
+## Essential ArchISO packages
+grub
+mkinitcpio-archiso
+pv
+syslinux
+zestiso-archiso-files
+#
+## Essential ZestISO system packages
+amd-ucode
+intel-ucode
+mkinitcpio
+terminus-font
+zestiso-core
