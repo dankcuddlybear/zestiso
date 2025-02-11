@@ -6,27 +6,27 @@ linux-zen
 linux-zen-headers
 
 ## All-in-one software bundles for extra functionality
-#bundle-desktop-utils
-#bundle-modemmanager
-#bundle-wine
-#arch-tweaks
-#bundle-archives
+# bundle-desktop-utils
+# bundle-modemmanager
+# bundle-wine
+# arch-tweaks
+# bundle-archives
 #bundle-bluetooth
-#bundle-cli-utils
-#bundle-filesystems
-#bundle-media-codecs
+# bundle-cli-utils
+# bundle-filesystems
+# bundle-media-codecs
 bundle-networking
-#bundle-printing
+# bundle-printing
 
 ## GPU drivers
 bundle-amd-gpu
 bundle-intel-gpu
 bundle-nvidia-foss
-#bundle-nvidia-pro
-#bundle-nvidia-pro-340xx
-#bundle-nvidia-pro-390xx
-#bundle-nvidia-pro-470xx
-#bundle-nvidia-pro-525xx
+# bundle-nvidia-pro
+# bundle-nvidia-pro-340xx
+# bundle-nvidia-pro-390xx
+# bundle-nvidia-pro-470xx
+# bundle-nvidia-pro-525xx
 
 ## Pipewire sound server
 lib32-pipewire-jack
@@ -49,11 +49,14 @@ yay
 bash
 gnu-free-fonts
 iptables-nft
-#lib32-sdl12-compat
+# lib32-sdl12-compat
 libglvnd
 ntfs-3g
 
 ## X.org basic GUI
+icewm
+lightdm-gtk-greeter
+xfce4-terminal
 xorg-server
 xorg-xinit
 
@@ -63,13 +66,13 @@ os-prober
 #testdisk
 
 ## Graphical applications
-#firefox-i18n-en-gb
-#firefox-ublock-origin
-#gparted
-#libreoffice-fresh-en-gb
-#octopi
-#qbittorrent
-#vlc
+# firefox-i18n-en-gb
+# firefox-ublock-origin
+gparted
+# libreoffice-fresh-en-gb
+# octopi
+# qbittorrent
+# vlc
 
 
 
@@ -94,4 +97,4 @@ linux-firmware
 mkinitcpio
 sudo
 terminus-font
-#zestiso-core
+# zestiso-core

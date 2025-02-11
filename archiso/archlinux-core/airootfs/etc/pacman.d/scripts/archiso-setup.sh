@@ -9,6 +9,11 @@ sed -i "s/#Server/Server/g" /etc/pacman.d/mirrorlist
 ## Enable important system services
 systemctl enable fstrim.timer systemd-timesyncd
 
+# Enable display manager
+systemctl enable sddm || \
+systemctl enable lightdm || \
+systemctl enable gdm
+
 ## Initialise Pacman keyring
 pacman-key --init
 pacman-key --populate

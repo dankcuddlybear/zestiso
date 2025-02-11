@@ -3,10 +3,9 @@
 Operation = Install
 Operation = Upgrade
 Type = Package
-Target = systemd
+Target = base
 
 [Action]
-Description = Finish setting up ArchISO environment...
+Description = Configuring ArchISO environment...
 When = PostTransaction
-Depends = systemd
 Exec = /etc/pacman.d/scripts/archiso-setup.sh
