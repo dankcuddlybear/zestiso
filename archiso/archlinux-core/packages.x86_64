@@ -9,11 +9,11 @@ linux-zen-headers
 # bundle-desktop-utils
 # bundle-modemmanager
 # bundle-wine
-# arch-tweaks
+arch-tweaks
 # bundle-archives
-#bundle-bluetooth
+# bundle-bluetooth
 # bundle-cli-utils
-# bundle-filesystems
+bundle-filesystems
 # bundle-media-codecs
 bundle-networking
 # bundle-printing
