@@ -1,0 +1,9 @@
+[Trigger]
+Operation = Remove
+Type = Package
+Target = zestiso-branding
+
+[Action]
+Description = Updating OS info...
+When = PostTransaction
+Exec = /usr/bin/cp /usr/share/zestiso/configs/backup/os-release /usr/lib/os-release

@@ -67,6 +67,7 @@ if [ "$(lscpu | grep -i "Vendor ID:" | cut -d ':' -f 2 | xargs)" != "AuthenticAM
 fi
 MarkPkgForRemoval arch-install-scripts
 MarkPkgForRemoval archinstall
+MarkPkgForRemoval boost1.86-libs
 MarkPkgForRemoval edk2-shell
 MarkPkgForRemoval memtest86+
 MarkPkgForRemoval memtest86+-efi
@@ -74,13 +75,16 @@ MarkPkgForRemoval mkinitcpio-archiso
 MarkPkgForRemoval mkinitcpio-netconf
 MarkPkgForRemoval mkinitcpio-nfs-utils
 MarkPkgForRemoval pv
+MarkPkgForRemoval syslinux
 MarkPkgForRemoval zestiso-archiso-files
+MarkPkgForRemoval zestiso-archiso-files-dev
+MarkPkgForRemoval zestiso-branding
 
 echo "Uninstalling unnecessary packages..."
 pacman --noconfirm -Rus $UNINSTALL_PKG &> /dev/null
 
 echo "Marking dependencies..."
-pacman --asdeps -D bash gnu-free-fonts iptables-nft lib32-sdl12-compat libglvnd noto-fonts ntfs-3g qt6-multimedia-gstreamer pacman phonon-qt6-gstreamer-git polkit wireplumber
+pacman --asdeps -D bash gnu-free-fonts iptables-nft lib32-sdl12-compat libglvnd noto-fonts ntfs-3g qt6-multimedia-gstreamer pacman phonon-qt6-gstreamer-git polkit wireplumber &> /dev/null
 
 ## Enable sudo for wheel members
 echo "%wheel ALL=(ALL:ALL) ALL" > /etc/sudoers.d/g_wheel

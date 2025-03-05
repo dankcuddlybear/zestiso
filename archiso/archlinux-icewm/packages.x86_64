@@ -1,0 +1,100 @@
+## DO NOT REMOVE - pacman should be installed first as some package install scripts rely upon it.
+pacman
+
+## Linux kernel and headers
+linux-zen
+linux-zen-headers
+
+## All-in-one software bundles for extra functionality
+# bundle-desktop-utils
+# bundle-modemmanager
+# bundle-wine
+arch-tweaks
+# bundle-archives
+# bundle-bluetooth
+# bundle-cli-utils
+bundle-filesystems
+# bundle-media-codecs
+bundle-networking
+# bundle-printing
+
+## GPU drivers
+bundle-amd-gpu
+bundle-intel-gpu
+bundle-nvidia-foss
+# bundle-nvidia-pro
+# bundle-nvidia-pro-340xx
+# bundle-nvidia-pro-390xx
+# bundle-nvidia-pro-470xx
+# bundle-nvidia-pro-525xx
+
+## Pipewire sound server
+lib32-pipewire-jack
+pipewire-alsa
+pipewire-jack
+pipewire-pulse
+pipewire-roc
+pipewire-v4l2
+pipewire-zeroconf
+wireplumber
+
+## Compilers and extra software repositories
+base-devel
+chaotic-keyring
+chaotic-mirrorlist
+git
+yay
+
+## Custom defaults
+bash
+gnu-free-fonts
+iptables-nft
+# lib32-sdl12-compat
+libglvnd
+ntfs-3g
+
+## X.org basic GUI
+icewm
+lightdm-gtk-greeter
+xfce4-terminal
+xorg-server
+xorg-xinit
+
+## Extra packages
+nano
+os-prober
+#testdisk
+
+## Graphical applications
+# firefox-i18n-en-gb
+# firefox-ublock-origin
+gparted
+# libreoffice-fresh-en-gb
+# octopi
+# qbittorrent
+# vlc
+
+
+
+#### ESSENTIAL PACKAGES: DO NOT EDIT BELOW THIS LINE ####
+## Calamares installer
+alci-calamares
+arch-install-scripts
+boost1.86-libs
+#
+## ArchISO packages
+grub
+mkinitcpio-archiso
+pv
+syslinux
+#
+## Arch Linux system packages
+amd-ucode
+base
+efibootmgr
+intel-ucode
+linux-firmware
+mkinitcpio
+sudo
+terminus-font
+# zestiso-core
