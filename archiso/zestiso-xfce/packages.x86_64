@@ -6,59 +6,61 @@ linux-zen
 linux-zen-headers
 
 ## All-in-one software bundles for extra functionality
-bundle-desktop-utils
-bundle-archives
-bundle-bluetooth
-bundle-cli-utils
-bundle-filesystems
-bundle-media-codecs
+#bundle-desktop-utils
+#bundle-archives
+#bundle-bluetooth
+#bundle-cli-utils
+#bundle-filesystems
+#bundle-media-codecs
 #bundle-modemmanager
 bundle-networking
-bundle-printing
+#bundle-printing
 #bundle-wine
 #lib32-sdl12-compat
 
 ## XFCE desktop environment and applications
 bundle-xfce
-catfish
-galculator
+#catfish
+#galculator
 gnu-free-fonts
 mousepad
-orage
-ristretto
-xarchiver
-xfce4-calculator-plugin
-xfce4-clipman-plugin
-xfce4-cpufreq-plugin
-xfce4-cpugraph-plugin
-xfce4-dict
-xfce4-diskperf-plugin
-xfce4-docklike-plugin
-xfce4-fsguard-plugin
-xfce4-generic-slider
-xfce4-genmon-plugin
-xfce4-mailwatch-plugin
-xfce4-mount-plugin
-xfce4-mpc-plugin
-xfce4-netload-plugin
-xfce4-panel-profiles
-xfce4-places-plugin
-xfce4-screenshooter
-xfce4-sensors-plugin
-xfce4-smartbookmark-plugin
-xfce4-stopwatch-plugin
-xfce4-systemload-plugin
-xfce4-taskmanager
-xfce4-time-out-plugin
-xfce4-timer-plugin
-xfce4-verve-plugin
-xfce4-weather-plugin
-xfce4-windowck-plugin
-xfce4-whiskermenu-plugin
-xfce4-xkb-plugin
+#orage
+#ristretto
+#xarchiver
+#xfce4-calculator-plugin
+#xfce4-clipman-plugin
+#xfce4-cpufreq-plugin
+#xfce4-cpugraph-plugin
+#xfce4-dict
+#xfce4-diskperf-plugin
+#xfce4-docklike-plugin
+#xfce4-fsguard-plugin
+#xfce4-generic-slider
+#xfce4-genmon-plugin
+#xfce4-mailwatch-plugin
+#xfce4-mount-plugin
+#xfce4-mpc-plugin
+#xfce4-netload-plugin
+#xfce4-panel-profiles
+#xfce4-places-plugin
+#xfce4-screenshooter
+#xfce4-sensors-plugin
+#xfce4-smartbookmark-plugin
+#xfce4-stopwatch-plugin
+#xfce4-systemload-plugin
+#xfce4-taskmanager
+#xfce4-time-out-plugin
+#xfce4-timer-plugin
+#xfce4-verve-plugin
+#xfce4-weather-plugin
+#xfce4-windowck-plugin
+#xfce4-whiskermenu-plugin
+#xfce4-xkb-plugin
 xfce4-terminal
 
 ## Gaming and streaming
+#gamemode
+#lib32-gamemode
 #lib32-mangohud
 #mangohud
 #obs-studio
@@ -67,18 +69,18 @@ xfce4-terminal
 ## Themes
 
 ## GPU drivers
-bundle-amd-gpu
-bundle-intel-gpu
-bundle-nvidia-foss
+#bundle-amd-gpu
+#bundle-intel-gpu
+#bundle-nvidia-foss
 #bundle-nvidia-pro
 #bundle-nvidia-pro-340xx
 #bundle-nvidia-pro-390xx
 #bundle-nvidia-pro-470xx
 #bundle-nvidia-pro-525xx
-libglvnd
+#libglvnd
 
 ## Pipewire sound server
-lib32-pipewire-jack
+#lib32-pipewire-jack
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
@@ -95,16 +97,16 @@ git
 yay
 
 ## Extra packages
-firefox-i18n-en-gb
-firefox-ublock-origin
+#firefox-i18n-en-gb
+#firefox-ublock-origin
 gparted
-libreoffice-fresh-en-gb
+#libreoffice-fresh-en-gb
 nano
-octopi
-os-prober
-qbittorrent
-testdisk
-vlc
+#octopi
+#os-prober
+#qbittorrent
+#testdisk
+#vlc
 
 
 
@@ -119,7 +121,7 @@ grub
 mkinitcpio-archiso
 pv
 syslinux
-zestiso-archiso-files-dev
+zestiso-archiso-files
 #
 ## Essential ZestISO system packages
 amd-ucode

@@ -7,25 +7,22 @@ linux-zen-headers
 
 ## All-in-one software bundles for extra functionality
 bundle-desktop-utils
+bundle-archives
+bundle-bluetooth
+bundle-cli-utils
+bundle-filesystems
+bundle-media-codecs
 #bundle-modemmanager
+bundle-networking
+bundle-printing
 bundle-wine
-#arch-tweaks
-#bundle-archives
-#bundle-bluetooth
-#bundle-cli-utils
-#bundle-filesystems
-#bundle-media-codecs
-#bundle-networking
-#bundle-printing
 
-## KDE Plasma desktop environment
+## KDE Plasma desktop environment and applications
 bundle-kde
 #zestiso-config-kde
 zestiso-config-kde-gaming
-
-## KDE applications
 ark
-discover
+#discover
 dolphin
 dolphin-plugins
 filelight
@@ -62,7 +59,10 @@ sweeper
 yakuake
 
 ## Gaming and streaming
+gamemode
+lib32-gamemode
 lib32-mangohud
+lib32-sdl12-compat
 mangohud
 obs-studio
 steam-native-runtime
@@ -81,6 +81,9 @@ bundle-nvidia-foss
 #bundle-nvidia-pro-390xx
 #bundle-nvidia-pro-470xx
 #bundle-nvidia-pro-525xx
+libglvnd
+qt6-multimedia-gstreamer
+phonon-qt6-gstreamer-git
 
 ## Pipewire sound server
 lib32-pipewire-jack
@@ -98,16 +101,6 @@ chaotic-keyring
 chaotic-mirrorlist
 git
 yay
-
-## Custom defaults
-bash
-iptables-nft
-lib32-sdl12-compat
-libglvnd
-noto-fonts
-ntfs-3g
-qt6-multimedia-gstreamer
-phonon-qt6-gstreamer-git
 
 ## Extra packages
 firefox-i18n-en-gb
@@ -127,7 +120,6 @@ vlc
 ## Installer (will be removed after installation)
 alci-calamares
 arch-install-scripts
-archinstall
 boost1.86-libs
 #
 ## Essential ArchISO packages
@@ -139,7 +131,9 @@ zestiso-archiso-files
 #
 ## Essential ZestISO system packages
 amd-ucode
+bash
 intel-ucode
+iptables-nft
 mkinitcpio
 terminus-font
 zestiso-core
