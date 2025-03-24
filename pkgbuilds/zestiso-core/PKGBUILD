@@ -9,6 +9,7 @@ depends=(
 	arch-tweaks
 	base
 	bashrc-d
+	dosfstools
 	efibootmgr
 	KSMBD-MODULE
 	linux-firmware

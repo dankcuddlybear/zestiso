@@ -77,7 +77,6 @@ xfce4-terminal
 #bundle-nvidia-pro-390xx
 #bundle-nvidia-pro-470xx
 #bundle-nvidia-pro-525xx
-#libglvnd
 
 ## Pipewire sound server
 #lib32-pipewire-jack
@@ -97,37 +96,27 @@ git
 yay
 
 ## Extra packages
-#firefox-i18n-en-gb
-#firefox-ublock-origin
+firefox-i18n-en-gb
+firefox-ublock-origin
 gparted
-#libreoffice-fresh-en-gb
+libreoffice-fresh-en-gb
 nano
 #octopi
 #os-prober
 #qbittorrent
 #testdisk
-#vlc
+vlc
 
 
 
-#### DO NOT EDIT THE FOLLOWING SECTION ####
-## Installer (will be removed after installation)
-alci-calamares
-arch-install-scripts
-boost1.86-libs
-#
-## Essential ArchISO packages
-grub
-mkinitcpio-archiso
-pv
-syslinux
-zestiso-archiso-files
-#
-## Essential ZestISO system packages
+#### DO NOT EDIT - essential system packages ####
 amd-ucode
 bash
+grub
 intel-ucode
 iptables-nft
 mkinitcpio
+syslinux
 terminus-font
+zestiso-archiso-files
 zestiso-core

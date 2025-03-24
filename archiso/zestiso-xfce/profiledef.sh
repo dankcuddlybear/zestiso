@@ -16,4 +16,6 @@ pacman_conf="pacman.conf"
 airootfs_image_type="squashfs"
 airootfs_image_tool_options=('-comp' 'zstd' '-Xcompression-level' '22' '-b' '1M' '-not-reproducible')
 bootstrap_tarball_compression=('zstd' '-c' '-T0' '--auto-threads=logical' '--long' '-19')
-file_permissions=()
+file_permissions=(
+  ["/etc/calamares/finalise-install.sh"]="0:0:755"
+)

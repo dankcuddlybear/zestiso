@@ -6,7 +6,14 @@ pkgdesc='ZestISO archiso files'
 arch=(any)
 url='https://github.com/dankcuddlybear/zestiso'
 install=install.install
-depends=()
+depends=(
+	alci-calamares
+	arch-install-scripts
+	dosfstools
+	boost1.86-libs
+	grub
+	mkinitcpio-archiso
+)
 package() {
 	cp -r "$srcdir/../files/usr" "$pkgdir"
 	"$srcdir/../../set-default-permissions.sh" "$pkgdir"

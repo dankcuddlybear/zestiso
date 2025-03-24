@@ -16,4 +16,4 @@ Target = grub-luks-keyfile-git
 [Action]
 Description = Update GRUB bootloader
 When = PostTransaction
-Exec = /usr/lib/arch-tweaks/system-scripts/grub-install upgrade
+Exec = /usr/lib/arch-tweaks/system-tools/install-grub update

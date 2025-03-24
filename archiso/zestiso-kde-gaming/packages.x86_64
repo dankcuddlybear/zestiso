@@ -81,7 +81,6 @@ bundle-nvidia-foss
 #bundle-nvidia-pro-390xx
 #bundle-nvidia-pro-470xx
 #bundle-nvidia-pro-525xx
-libglvnd
 qt6-multimedia-gstreamer
 phonon-qt6-gstreamer-git
 
