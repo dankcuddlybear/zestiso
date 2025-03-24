@@ -1,9 +1,0 @@
-[Trigger]
-Type = Package
-Operation = Install
-Target = arch-tweaks-meta
-
-[Action]
-Description = Configuring arch-tweaks
-When = PostTransaction
-Exec = /usr/lib/arch-tweaks/system-scripts/arch-tweaks-install
