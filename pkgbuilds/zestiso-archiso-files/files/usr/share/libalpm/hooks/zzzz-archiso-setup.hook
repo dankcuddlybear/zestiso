@@ -9,4 +9,4 @@ Target = systemd
 Description = Finish setting up ArchISO environment...
 When = PostTransaction
 Depends = systemd
-Exec = /etc/pacman.d/scripts/archiso-setup.sh
+Exec = /usr/share/libalpm/scripts/archiso-setup.sh
