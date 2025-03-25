@@ -90,13 +90,8 @@ pacman --asdeps -D bash gnu-free-fonts iptables-nft lib32-sdl12-compat libglvnd 
 echo "%wheel ALL=(ALL:ALL) ALL" > /etc/sudoers.d/g_wheel
 
 ## Remove files needed only by ArchISO
-rm -rf /etc/polkit-1/rules.d/49-nopasswd_global.rules \
-/etc/sddm.conf.d/autologin.conf \
-/etc/sudoers.d/g_wheel_nopasswd \
-/etc/systemd/system/getty@tty1.service.d \
-/etc/systemd/journald.conf.d/volatile-storage.conf \
-/etc/systemd/system/getty@tty1.service.d/autologin.conf
 rm -rf /etc/calamares
+(pacman -Qi lightdm &> /dev/null) || rm -rf /etc/lightdm
 
 ## Exit gracefully even if errors occurred
 exit 0

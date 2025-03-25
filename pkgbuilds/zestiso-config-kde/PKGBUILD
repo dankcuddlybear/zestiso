@@ -13,5 +13,4 @@ package() {
 	cp -r "$srcdir/../files/etc" "$pkgdir"
 	cp -r "$srcdir/../files/usr" "$pkgdir"
 	"$srcdir/../../set-default-permissions.sh" "$pkgdir"
-	chmod +x "$pkgdir/usr/share/libalpm/scripts/zestiso-config-kde-install"
 }

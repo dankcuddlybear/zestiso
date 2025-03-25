@@ -15,9 +15,10 @@ depends=(
 	mkinitcpio-archiso
 )
 package() {
+    cp -r "$srcdir/../files/etc" "$pkgdir"
 	cp -r "$srcdir/../files/usr" "$pkgdir"
 	"$srcdir/../../set-default-permissions.sh" "$pkgdir"
-	chmod +x "$pkgdir/usr/share/zestiso/archiso-files/etc/pacman.d/scripts/archiso-setup.sh"
-	chmod 750 "$pkgdir/usr/share/zestiso/archiso-files/etc/polkit-1/rules.d"
-	chmod 750 "$pkgdir/usr/share/zestiso/archiso-files/etc/sudoers.d"
+	chmod 750 "$pkgdir/etc/sudoers.d"
+	chmod +x "$pkgdir/usr/share/libalpm/scripts/archiso-setup.sh"
+	chmod 750 "$pkgdir/usr/share/polkit-1/rules.d"
 }
