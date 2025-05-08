@@ -1,0 +1,77 @@
+## DO NOT REMOVE - pacman should be installed first as some package install scripts rely upon it.
+pacman
+
+## Linux kernel and headers
+linux-zen
+linux-zen-headers
+
+## All-in-one software bundles for extra functionality
+#bundle-desktop-utils
+#bundle-archives
+#bundle-bluetooth
+#bundle-cli-utils
+#bundle-filesystems
+#bundle-media-codecs
+#bundle-modemmanager
+bundle-networking
+#bundle-printing
+#bundle-wine
+
+## Video drivers
+#bundle-amd-gpu
+#bundle-intel-gpu
+#bundle-nvidia-foss
+#bundle-nvidia-pro
+#bundle-nvidia-pro-340xx
+#bundle-nvidia-pro-390xx
+#bundle-nvidia-pro-470xx
+#bundle-nvidia-pro-525xx
+#lib32-sdl12-compat
+
+## Pipewire sound server
+#lib32-pipewire-jack
+#pipewire-alsa
+#pipewire-jack
+#pipewire-pulse
+#pipewire-roc
+#pipewire-v4l2
+#pipewire-zeroconf
+#wireplumber
+
+## Compilers and extra software repositories
+base-devel
+chaotic-keyring
+chaotic-mirrorlist
+git
+yay
+
+## Extra packages
+#firefox-i18n-en-gb
+#firefox-ublock-origin
+#gparted
+#libreoffice-fresh-en-gb
+nano
+octopi
+#os-prober
+#qbittorrent
+#testdisk
+#vlc
+
+
+
+## Installer - will be automatically uninstalled when finished
+alci-calamares
+arch-install-scripts
+boost1.86-libs
+
+#### DO NOT EDIT - essential system packages ####
+amd-ucode
+bash
+grub
+intel-ucode
+iptables-nft
+mkinitcpio
+syslinux
+terminus-font
+zestiso-archiso-files
+zestiso-core

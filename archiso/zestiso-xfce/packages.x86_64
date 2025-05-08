@@ -9,14 +9,13 @@ linux-zen-headers
 #bundle-desktop-utils
 bundle-archives
 bundle-bluetooth
-#bundle-cli-utils
-#bundle-filesystems
+bundle-cli-utils
+bundle-filesystems
 bundle-media-codecs
-bundle-modemmanager
+#bundle-modemmanager
 bundle-networking
 bundle-printing
 #bundle-wine
-#lib32-sdl12-compat
 
 ## XFCE desktop environment and applications
 bundle-xfce
@@ -68,7 +67,7 @@ xfce4-terminal
 
 ## Themes
 
-## GPU drivers
+## Video drivers
 #bundle-amd-gpu
 #bundle-intel-gpu
 #bundle-nvidia-foss
@@ -77,6 +76,8 @@ xfce4-terminal
 #bundle-nvidia-pro-390xx
 #bundle-nvidia-pro-470xx
 #bundle-nvidia-pro-525xx
+#lib32-sdl12-compat
+qt6-multimedia-gstreamer
 
 ## Pipewire sound server
 #lib32-pipewire-jack
@@ -108,6 +109,11 @@ octopi
 vlc
 
 
+
+## Installer - will be automatically uninstalled when finished
+alci-calamares
+arch-install-scripts
+boost1.86-libs
 
 #### DO NOT EDIT - essential system packages ####
 amd-ucode

@@ -7,11 +7,7 @@ arch=(any)
 url='https://github.com/dankcuddlybear/zestiso'
 install=install.install
 depends=(
-	alci-calamares
-	arch-install-scripts
 	dosfstools
-	boost1.86-libs
-	grub
 	mkinitcpio-archiso
 )
 package() {
