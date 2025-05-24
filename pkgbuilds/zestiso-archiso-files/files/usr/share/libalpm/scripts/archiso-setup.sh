@@ -9,7 +9,7 @@ passwd -d root
 sed -i "s/#Server/Server/g" /etc/pacman.d/mirrorlist
 
 ## Enable important system services
-systemctl enable fstrim.timer systemd-timesyncd
+systemctl enable fstrim.timer systemd-timesyncd NetworkManager
 
 ## Initialise Pacman keyring
 pacman-key --init

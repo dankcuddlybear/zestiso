@@ -13,7 +13,7 @@ linux-zen-headers
 #bundle-filesystems
 #bundle-media-codecs
 #bundle-modemmanager
-bundle-networking
+#bundle-networking
 #bundle-printing
 #bundle-wine
 
@@ -51,7 +51,8 @@ yay
 #gparted
 #libreoffice-fresh-en-gb
 nano
-octopi
+networkmanager
+#octopi
 #os-prober
 #qbittorrent
 #testdisk
@@ -60,9 +61,9 @@ octopi
 
 
 ## Installer - will be automatically uninstalled when finished
-alci-calamares
-arch-install-scripts
-boost1.86-libs
+#alci-calamares
+#arch-install-scripts
+#boost1.86-libs
 
 #### DO NOT EDIT - essential system packages ####
 amd-ucode
