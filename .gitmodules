@@ -4,3 +4,6 @@
 [submodule "pkgbuilds/futura-icon-pack-git"]
 	path = pkgbuilds/futura-icon-pack-git
 	url = https://aur.archlinux.org/futura-icon-pack-git.git
+[submodule "pkgbuilds/koi"]
+	path = pkgbuilds/koi
+	url = https://aur.archlinux.org/koi.git
