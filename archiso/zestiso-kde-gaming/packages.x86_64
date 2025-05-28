@@ -17,52 +17,69 @@ bundle-networking
 bundle-printing
 bundle-wine
 
-## KDE Plasma desktop environment and applications
+## User specified extra software
+firefox-dark-reader
+firefox-i18n-en-gb
+firefox-ublock-origin
+gparted
+libreoffice-fresh-en-gb
+nano
+pamac
+qbittorrent
+testdisk
+vlc
+
+## KDE Plasma desktop environment, configs and essential software
 bundle-kde
 #zestiso-config-kde
-zestiso-config-kde-gaming
+#zestiso-config-kde-gaming
 ark
-#discover
 dolphin
-dolphin-plugins
-filelight
 gwenview
-isoimagewriter
-#kalarm
-#kamoso
 kate
-kbackup
 kcalc
-kcharselect
-kcolorchooser
-kdeconnect
+konsole
+kwalletmanager
+plasma-systemmonitor
+spectacle
+
+## KDE Plasma optional enhancements
+#dolphin-plugins
+#kdeconnect
 #kdepim-addons
 kdeplasma-addons
-kfind
-kgpg
-khelpcenter
-#kmail
-kolourpaint
-konsole
-#krecorder
-krename
-#ktimer
-#ktorrent
-kwalletmanager
-okteta
-okular
+koi
 packagekit-qt6
-plasma-systemmonitor
-plasma-vault
-spectacle
-sweeper
-yakuake
+#plasma-vault
+
+## KDE Plasma - useful applications
+filelight
+isoimagewriter
+#kamoso
+kbackup
+kcharselect
+#kcolorchooser
+kfind
+khelpcenter
+kolourpaint
+krename
+okular
+
+## KDE Plasma - extra applications
+#kalarm
+#kgpg
+#kmail
+#krecorder
+#ktimer
+#okteta
+#yakuake
 
 ## Gaming and streaming
 gamemode
 lib32-gamemode
 lib32-mangohud
 lib32-sdl12-compat
+lutris
 mangohud
 obs-studio
 steam-native-runtime
@@ -70,6 +87,7 @@ steam-native-runtime
 ## Themes
 fruit-cursors
 plasma-colors-midnight
+plasma-theme-klarity
 plymouth-theme-breeze
 
 ## GPU drivers
@@ -101,18 +119,6 @@ chaotic-mirrorlist
 git
 yay
 
-## Extra packages
-firefox-i18n-en-gb
-firefox-ublock-origin
-gparted
-libreoffice-fresh-en-gb
-nano
-#octopi
-os-prober
-qbittorrent
-testdisk
-vlc
-
 
 
 #### DO NOT EDIT THE FOLLOWING SECTION ####
@@ -134,5 +140,6 @@ bash
 intel-ucode
 iptables-nft
 mkinitcpio
+os-prober
 terminus-font
 zestiso-core
