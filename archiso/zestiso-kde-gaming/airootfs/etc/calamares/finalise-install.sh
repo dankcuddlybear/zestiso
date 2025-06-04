@@ -18,9 +18,6 @@ echo "default_image=\"/boot/initramfs-$KERNEL_NAME.img\"" >> /etc/mkinitcpio.d/$
 echo "#default_uki=\"/efi/EFI/Linux/arch-$KERNEL_NAME.efi\"" >> /etc/mkinitcpio.d/$KERNEL_NAME.preset
 echo "#default_options=\"--splash /usr/share/systemd/bootctl/splash-arch.bmp\"" >> /etc/mkinitcpio.d/$KERNEL_NAME.preset
 
-## Configure mkinitcpio
-rm -f /etc/mkinitcpio.conf.system
-
 ## Remove unnecessary services
 echo "Removing unnecessary packages..."
 if (! (lspci | grep -i "VMware" &> /dev/null)) && \
@@ -46,7 +43,7 @@ if (! (lspci | grep -i "Virtio" &> /dev/null)) && \
 	MarkPkgForRemoval qemu-guest-agent
 fi
 if (! (lspci | grep -i "VGA compatible controller: NVIDIA" &> /dev/null)); then
-	MarkPkgForRemoval bundle-nvidia-foss
+	MarkPkgForRemoval bundle-nvidia-free
 	MarkPkgForRemoval bundle-nvidia-pro
 	MarkPkgForRemoval bundle-nvidia-pro-340xx
 	MarkPkgForRemoval bundle-nvidia-pro-390xx
@@ -68,6 +65,7 @@ fi
 MarkPkgForRemoval arch-install-scripts
 MarkPkgForRemoval archinstall
 MarkPkgForRemoval boost1.86-libs
+MarkPkgForRemoval calamares
 MarkPkgForRemoval edk2-shell
 MarkPkgForRemoval memtest86+
 MarkPkgForRemoval memtest86+-efi
@@ -87,11 +85,12 @@ echo "Marking dependencies..."
 pacman --asdeps -D bash gnu-free-fonts iptables-nft lib32-sdl12-compat libglvnd noto-fonts ntfs-3g qt6-multimedia-gstreamer pacman phonon-qt6-gstreamer-git polkit wireplumber &> /dev/null
 
 ## Enable sudo for wheel members
-echo "%wheel ALL=(ALL:ALL) ALL" > /etc/sudoers.d/g_wheel
+echo "%wheel ALL=(ALL:ALL) ALL" > /etc/sudoers.d/10_wheel
 
 ## Remove files needed only by ArchISO
-rm -rf /etc/calamares
 (pacman -Qi lightdm &> /dev/null) || rm -rf /etc/lightdm
+rm -f /etc/mkinitcpio.conf.system /etc/sudoers.d/10-installer
+rm -rf /etc/calamares
 
 ## Exit gracefully even if errors occurred
 exit 0

@@ -7,6 +7,7 @@ passwd -d root
 
 ## Uncomment mirrors in pacman mirrorlist
 sed -i "s/#Server/Server/g" /etc/pacman.d/mirrorlist
+[ -f /etc/pacman.d/archlinuxcn-mirrorlist ] && sed -i "s/#Server/Server/g" /etc/pacman.d/archlinuxcn-mirrorlist
 
 ## Enable important system services
 systemctl enable fstrim.timer systemd-timesyncd NetworkManager

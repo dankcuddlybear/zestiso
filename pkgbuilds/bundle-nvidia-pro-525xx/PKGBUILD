@@ -5,7 +5,7 @@ pkgrel=$(expr $(date +%-S) + $(expr 60 \* $(date +%-M)) + $(expr 3600 \* $(date 
 pkgdesc='Proprietary Nvidia GPU 525.xx drivers - all-in-one bundle (64bit+32bit, for Maxwell GPUs and newer)'
 arch=(x86_64)
 url='https://github.com/dankcuddlybear/zestiso'
-conflicts=('bundle-nvidia-foss' 'bundle-nvidia-pro' 'bundle-nvidia-pro-340xx' 'bundle-nvidia-pro-390xx' 'bundle-nvidia-pro-470xx')
+conflicts=('bundle-nvidia-free' 'bundle-nvidia-pro' 'bundle-nvidia-pro-340xx' 'bundle-nvidia-pro-390xx' 'bundle-nvidia-pro-470xx')
 depends=(libxnvctrl-525xx
 	nvidia-525xx-dkms
 	nvidia-525xx-settings

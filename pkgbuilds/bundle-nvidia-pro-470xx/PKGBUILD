@@ -5,7 +5,7 @@ pkgrel=$(expr $(date +%-S) + $(expr 60 \* $(date +%-M)) + $(expr 3600 \* $(date 
 pkgdesc='Proprietary Nvidia GPU 470.xx drivers - all-in-one bundle (64bit+32bit, for Kepler GPUs)'
 arch=(x86_64)
 url='https://github.com/dankcuddlybear/zestiso'
-conflicts=('bundle-nvidia-foss' 'bundle-nvidia-pro' 'bundle-nvidia-pro-340xx' 'bundle-nvidia-pro-390xx' 'bundle-nvidia-pro-525xx')
+conflicts=('bundle-nvidia-free' 'bundle-nvidia-pro' 'bundle-nvidia-pro-340xx' 'bundle-nvidia-pro-390xx' 'bundle-nvidia-pro-525xx')
 depends=(libxnvctrl-470xx
 	nvidia-470xx-dkms
 	nvidia-470xx-settings

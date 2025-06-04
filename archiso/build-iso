@@ -1,5 +1,5 @@
 #!/bin/sh
-ISO_OUT_DIR="$HOME/Documents/os-iso"
+ISO_OUT_DIR="/run/media/am/Ventoy"
 ARCHISO_PROFILE="$1"
 [ -z "$1" ] && ARCHISO_PROFILE="zestiso-kde"
 MEM_MB_SIZE=$(free -m | grep "Mem:" | xargs | cut -d ' ' -f 2)

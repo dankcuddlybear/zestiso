@@ -19,7 +19,6 @@ depends=(
 	mtools
 	polkit
 	sudo
-	stress
 	texinfo
 	usbutils
 )

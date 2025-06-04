@@ -48,6 +48,35 @@ winerunner: Automatically configure Wine while running Windows games and apps
 zestiso-archiso-files: ZestISO live ISO installer files
 zestiso-branding: ZestISO OS branding
 
+## System requirements
+The system requirements vary depending on the desktop environment and use case (i.e. casual work or gaming).
+Currently, only devices with a 64-bit Intel or AMD processor are supported (x64, x86_64 or amd64).
+ZestISO and Arch Linux may come to more devices in the future, like smartphones/tablets, Chromebooks, Apple Silicon Macs and others. But that will take a very long time to happen.
+Older 32-bit devices will NEVER be supported as they are just too slow, limited in functionality and complicated to maintain.
+#### KDE Plasma: minimum requirements
+- CPU: 1GHz
+- GPU: Any GPU or integrated graphics from after 2008
+- RAM: 2GiB
+- Storage: 12GiB free disk space
+#### KDE Plasma: recommended requirements
+- CPU: 1.4GHz dual-core
+- GPU: Any GPU or integrated graphics from after 2012
+- RAM: 4GiB
+- Storage: 16GiB free disk space
+
+## System requirements for gaming
+The Linux Gaming Ready certification has different tiers that determine how good your hardware is, and what kind of games your device can run.
+These range from the lowest tier to the highest tier. The tier given depends on the age of your hardware, compatibility with games and general performance. NVIDIA GPUs have limited support as well as some issues with certain software. For that reason the highest tier you can achieve with any NVIDIA GPU is Silver.
+
+#### Poop
+The worst tier, given to hardware that does not meet the requirements of higher tiers. Only good for 8-bit and 16-bit retro game emulation and maybe Linux native games or old Windows games using DirectX 9 and below. No support for any recent Windows games. You don't have a Gaming PC, stop calling it a Gaming PC.
+
+#### Rust
+Basically obsolete. Enough to run for Indie games, older Windows games and possibly emulation of 6th and 7th generation consoles. Don't expect any modern AAA game to run at all.
+CPU: 1.4GHz, 4 cores or 2 cores with hyperthreading
+RAM: 4GB DDR2
+GPU: 2GB VRAM, Vulkan 1.3
+
 ## Getting ZestISO
 There are no online hosted images available to download (yet). You will have to build them yourself. Please read the next 2 sections for build instructions.
 zestiso-kde: ZestISO with KDE Plasma desktop environment and pre-installed applications
