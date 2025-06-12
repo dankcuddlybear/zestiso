@@ -23,15 +23,16 @@ iptables-nft
 mkinitcpio
 ## Core base packages and utilities
 zestiso-core
-arch-tweaks
-base
-bashrc-d
-dosfstools
-efibootmgr
-linux-firmware
-sudo
+#arch-tweaks
+#base
+#bashrc-d
+#dosfstools
+#efibootmgr
+#linux-firmware
+#sudo
 #
 ## Extra system packages (recommended)
+dotfiles-installer
 os-prober
 terminus-font
 #
@@ -124,10 +125,11 @@ kcalc
 konsole
 #
 ## KDE Plasma extra functionality (recommended)
-#dolphin-plugins
-#kdeconnect
-#kdepim-addons
+dolphin-plugins
+kdeconnect
+kdepim-addons
 kdeplasma-addons
+kio-gdrive
 koi
 packagekit-qt6
 #plasma-vault
@@ -135,10 +137,10 @@ packagekit-qt6
 ## Useful KDE applications
 filelight
 isoimagewriter
-#kamoso
+kamoso
 kbackup
 kcharselect
-#kcolorchooser
+kcolorchooser
 kfind
 khelpcenter
 kolourpaint
@@ -146,13 +148,12 @@ krename
 okular
 #
 ## Extra KDE applications
-#kalarm
-#kgpg
-#kmail
-#krecorder
-#ktimer
-#okteta
-#yakuake
+kalarm
+kgpg
+kmail
+krecorder
+ktimer
+okteta
 #
 ## Themes
 fruit-cursors

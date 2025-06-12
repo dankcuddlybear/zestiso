@@ -1,5 +1,4 @@
-# GRUB boot loader configuration
-
+## GRUB boot loader configuration
 GRUB_DEFAULT=saved
 GRUB_TIMEOUT=10
 GRUB_DISTRIBUTOR="Arch"

@@ -82,7 +82,7 @@ echo "Uninstalling unnecessary packages..."
 pacman --noconfirm -Rus $UNINSTALL_PKG &> /dev/null
 
 echo "Marking dependencies..."
-pacman --asdeps -D bash gnu-free-fonts iptables-nft lib32-sdl12-compat libglvnd noto-fonts ntfs-3g qt6-multimedia-gstreamer pacman phonon-qt6-gstreamer-git polkit wireplumber &> /dev/null
+pacman --asdeps -D bash gnu-free-fonts iptables-nft lib32-sdl12-compat libglvnd mkinitcpio noto-fonts ntfs-3g qt6-multimedia-gstreamer pacman phonon-qt6-gstreamer-git polkit wireplumber &> /dev/null
 
 ## Enable sudo for wheel members
 echo "%wheel ALL=(ALL:ALL) ALL" > /etc/sudoers.d/10_wheel
