@@ -1,0 +1,14 @@
+[Desktop Entry]
+DefaultProfile=Profile.profile
+
+[General]
+ConfigVersion=1
+
+[KonsoleWindow]
+UseSingleInstance=true
+
+[MainWindow]
+MenuBar=Enabled
+
+[UiSettings]
+ColorScheme=

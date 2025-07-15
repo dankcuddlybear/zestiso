@@ -1,86 +1,93 @@
-## DO NOT REMOVE - pacman should be installed first as some package install scripts rely upon it.
-pacman
+## List of software packages included in the final ISO image.
+## Please scroll down to the next section to customise your ISO.
 
-## Linux kernel and headers
+#### DO NOT EDIT THIS SECTION ####
+## Install Pacman first (required for other package install scripts)
+pacman
+#
+## Essential ArchISO dependency packages
+grub
+mkinitcpio-archiso
+syslinux
+## pv is optional, to display progress during copy to RAM,
+## but this is unsupported and therefore not needed
+#
+## airootfs files and scripts
+zestiso-archiso-files
+#
+## Essential system packages
+amd-ucode
+bash
+intel-ucode
+iptables-nft
+mkinitcpio
+## Core base packages and utilities
+zestiso-core
+#arch-tweaks
+#base
+#bashrc-d
+#dosfstools
+#efibootmgr
+#linux-firmware
+#sudo
+#
+## Extra system packages (recommended)
+dotfiles-installer
+os-prober
+terminus-font
+#
+## Installer (will be removed after installation)
+calamares
+#### END OF SECTION ####
+
+
+## You may customise your ISO image in the following sections.
+
+#### Linux kernel and headers (ESSENTIAL) ####
+## You must select at least one linux kernel as well as its corresponding headers.
 linux-zen
 linux-zen-headers
 
-## All-in-one software bundles for extra functionality
-#bundle-desktop-utils
+#### System components (all in one metapackages) ####
+## Desktop utilities (installs all other system components in this list)
+bundle-desktop-utils
+#
+## Support for additional compressed file formats (rar, 7z, etc.)
 bundle-archives
+#
+## Bluetooth support via BlueZ
 bundle-bluetooth
+#
+## Useful command-line utilities from other distros (ddrescue, gptfdisk, man-pages, usbutils etc.)
 bundle-cli-utils
+#
+## Support for extra filesystems (NTFS, BTRFS, LVM/RAID etc.) and encryption
 bundle-filesystems
+#
+## Extra media codecs for music and video files
 bundle-media-codecs
+## Mobile data support for devices with a built-in 3G/4G/5G modem
+## (note that this does not include support for voice calls and SMS)
 #bundle-modemmanager
+## Wireless and wired networking support and service discovery
 bundle-networking
+## Printing/scanning support and drivers
 bundle-printing
-#bundle-wine
+## Support for Windows games and applications
+bundle-wine
 
-## XFCE desktop environment and applications
-bundle-xfce
-catfish
-galculator
-gnu-free-fonts
-mousepad
-#orage
-ristretto
-xarchiver
-#xfce4-calculator-plugin
-xfce4-clipman-plugin
-#xfce4-cpufreq-plugin
-#xfce4-cpugraph-plugin
-#xfce4-dict
-#xfce4-diskperf-plugin
-#xfce4-docklike-plugin
-#xfce4-fsguard-plugin
-#xfce4-generic-slider
-#xfce4-genmon-plugin
-#xfce4-mailwatch-plugin
-xfce4-mount-plugin
-#xfce4-mpc-plugin
-#xfce4-netload-plugin
-xfce4-panel-profiles
-#xfce4-places-plugin
-xfce4-screenshooter
-xfce4-sensors-plugin
-#xfce4-smartbookmark-plugin
-#xfce4-stopwatch-plugin
-#xfce4-systemload-plugin
-xfce4-taskmanager
-#xfce4-time-out-plugin
-#xfce4-timer-plugin
-#xfce4-verve-plugin
-#xfce4-weather-plugin
-xfce4-windowck-plugin
-xfce4-whiskermenu-plugin
-#xfce4-xkb-plugin
-xfce4-terminal
-
-## Gaming and streaming
-#gamemode
-#lib32-gamemode
-#lib32-mangohud
-#mangohud
-#obs-studio
-#steam-native-runtime
-
-## Themes
-
-## Video drivers
-#bundle-amd-gpu
-#bundle-intel-gpu
-#bundle-nvidia-foss
+#### GPU drivers ####
+bundle-amd-gpu
+bundle-intel-gpu
+bundle-nvidia-free
 #bundle-nvidia-pro
 #bundle-nvidia-pro-340xx
 #bundle-nvidia-pro-390xx
 #bundle-nvidia-pro-470xx
 #bundle-nvidia-pro-525xx
-#lib32-sdl12-compat
-qt6-multimedia-gstreamer
 
-## Pipewire sound server
-#lib32-pipewire-jack
+#### Pipewire sound server ####
+lib32-pipewire-jack
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
@@ -89,40 +96,63 @@ pipewire-v4l2
 pipewire-zeroconf
 wireplumber
 
-## Compilers and extra software repositories
+#### Compilers, extra software repositories and tools ####
+#archlinuxcn-keyring
+#archlinuxcn-mirrorlist
 base-devel
 chaotic-keyring
 chaotic-mirrorlist
 git
 yay
 
-## Extra packages
+#### XFCE desktop environment and applications ####
+## XFCE core packages and configs (uncomment all if installing XFCE)
+bundle-xfce
+#
+## Essential XFCE applications (uncomment all if installing XFCE)
+xfce4-terminal
+#
+## XFCE extra functionality (recommended)
+
+#
+## Useful XFCE applications
+
+#
+## Extra XFCE applications
+
+#
+## Themes
+
+
+#### EXTRA SOFTWARE AND PACKAGES ####
+## Internet
+firefox-dark-reader
 firefox-i18n-en-gb
 firefox-ublock-origin
-gparted
-libreoffice-fresh-en-gb
-nano
-octopi
-#os-prober
-#qbittorrent
-#testdisk
-vlc
-
-
-
-## Installer - will be automatically uninstalled when finished
-alci-calamares
+qbittorrent
+#
+## Productivity
+#libreoffice-fresh-en-gb
+#
+## Multimedia
+#obs-studio
+#vlc
+#
+## Gaming
+#gamemode
+#lib32-gamemode
+#lib32-mangohud
+#lib32-sdl12-compat
+#lutris
+#mangohud
+#steam-native-runtime
+#
+## System tools
 arch-install-scripts
-boost1.86-libs
+fastfetch
+gparted
+nano
+#pamac
+testdisk
 
-#### DO NOT EDIT - essential system packages ####
-amd-ucode
-bash
-grub
-intel-ucode
-iptables-nft
-mkinitcpio
-syslinux
-terminus-font
-zestiso-archiso-files
-zestiso-core
+#### User specified extra software - add your packages below ####

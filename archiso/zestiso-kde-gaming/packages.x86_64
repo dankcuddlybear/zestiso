@@ -186,9 +186,10 @@ steam-native-runtime
 #
 ## System tools
 arch-install-scripts
+fastfetch
 gparted
 nano
-pamac
+pamac-plasma
 testdisk
 
 #### User specified extra software - add your packages below ####

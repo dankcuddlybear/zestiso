@@ -59,7 +59,7 @@ fi
 if [ "$(lscpu | grep -i "Vendor ID:" | cut -d ':' -f 2 | xargs)" != "GenuineIntel" ]; then
 	MarkPkgForRemoval intel-ucode
 fi
-if [ "$(lscpu | grep -i "Vendor ID:" | cut -d ':' -f 2 | xargs)" != "AuthenticAMD" ]; then
+if [ "$(lscpu | grep -i "Vendor ID(pacman -Qi $1 &> /dev/null) && UNINSTALL_PKG="$1 $UNINSTALL_PKG":" | cut -d ':' -f 2 | xargs)" != "AuthenticAMD" ]; then
 	MarkPkgForRemoval amd-ucode
 fi
 MarkPkgForRemoval arch-install-scripts
@@ -89,7 +89,7 @@ echo "%wheel ALL=(ALL:ALL) ALL" > /etc/sudoers.d/10_wheel
 
 ## Remove files needed only by ArchISO
 (pacman -Qi lightdm &> /dev/null) || rm -rf /etc/lightdm
-rm -f /etc/mkinitcpio.conf.system /etc/sudoers.d/10-installer
+rm -f /version /etc/mkinitcpio.conf.system /etc/sudoers.d/10-installer
 rm -rf /etc/calamares
 
 ## Exit gracefully even if errors occurred
