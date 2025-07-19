@@ -12,4 +12,5 @@ package() {
 	cp -r "$srcdir/../files/usr" "$pkgdir"
 	"$srcdir/../../set-default-permissions.sh" "$pkgdir"
 	chmod +x "$pkgdir/usr/lib/arch-pkg-gui-tools/keyring-updater.sh"
+	chmod +x "$pkgdir/usr/lib/arch-pkg-gui-tools/pkg-reinstaller.sh"
 }

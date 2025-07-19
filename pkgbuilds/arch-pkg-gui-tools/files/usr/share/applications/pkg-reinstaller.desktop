@@ -1,13 +1,13 @@
 [Desktop Entry]
 Type=Application
-Name=Keyring updater
-Comment=Use this when downloaded packages fail signature verification
-Exec=/usr/lib/arch-pkg-gui-tools/keyring-updater.sh
+Name=Package reinstaller
+Comment=Use this when updating software packages conflict with files or otherwise fail to update
+Exec=/usr/lib/arch-pkg-gui-tools/pkg-reinstaller.sh
 X-KDE-StartupNotify=false
 NoDisplay=false
-Terminal=false
+Terminal=true
 Categories=GNOME;GTK;System;PackageManager;Settings;X-XFCE-SettingsDialog;X-XFCE-SystemSettings;
-Icon=database-change-key
+Icon=package-reinstall
 Keywords[af]=bywerkings;opgradeer;bronne;lêerstoor;voorkeure;installeer;verwyder;program;sagteware;toep;winkel;
 Keywords[ar]=تحديثات;ترقيات;مصادر;مستودعات;تفضيلات;تنصيب;إزالة;برنامج;برمجية;تطبيق;سوق;تحديث;ترقية;مصدر;مستودع;
 Keywords[as]=আপডেইটসমূহ;উন্নয়ন;উৎসসমূহ;ভঁৰালসমূহ;পছন্দসমূহ;ইনস্টল;আনইনস্টল;প্ৰগ্ৰাম;চফ্টৱেৰ;এপ;সংৰক্ষণ;

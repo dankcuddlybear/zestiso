@@ -14,7 +14,7 @@ depends=(bluedevil
 	plasma-nm
 	plasma-pa
 	powerdevil power-profiles-daemon python-gobject
-	sddm
+	sddm-kcm
 	xdg-desktop-portal-gtk
 	xdg-desktop-portal-kde
 )
