@@ -12,5 +12,7 @@ sudo mkarchiso -v -w "$ARCHISO_WORK_DIR" "$ARCHISO_PROFILE" && sync && \
 sudo chown -R $(whoami):$(whoami) out && cd out && \
 mkdir -p "$ISO_OUT_DIR" && mv *.iso "$ISO_OUT_DIR" && \
 cd ../ && rmdir out && sudo rm -rf $ARCHISO_WORK_DIR && \
-echo "ISO BUILT: $(date)"
-sync
+echo "ISO BUILT: $(date)" && sync && paplay /usr/share/sounds/freedesktop/stereo/complete.oga && \
+notify-send --urgency=critical --app-name="mkarchiso" --icon=media-optical "ArchISO build complete" "$1" || \
+(notify-send --urgency=critical --app-name="mkarchiso" --icon=media-optical "ArchISO build failed"; \
+paplay /usr/share/sounds/freedesktop/stereo/dialog-error.oga)

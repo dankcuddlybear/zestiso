@@ -97,8 +97,8 @@ pipewire-zeroconf
 wireplumber
 
 #### Compilers, extra software repositories and tools ####
-#archlinuxcn-keyring
-#archlinuxcn-mirrorlist
+archlinuxcn-keyring
+archlinuxcn-mirrorlist
 base-devel
 chaotic-keyring
 chaotic-mirrorlist
@@ -113,8 +113,6 @@ phonon-qt6-gstreamer-git
 plasma-systemmonitor
 qt6-multimedia-gstreamer
 spectacle
-#zestiso-config-kde
-#zestiso-config-kde-gaming
 #
 ## Essential KDE applications (uncomment all if installing KDE Plasma)
 ark
@@ -132,7 +130,8 @@ kdeplasma-addons
 kio-gdrive
 koi
 packagekit-qt6
-#plasma-vault
+plasma-vault
+plasma-welcome
 #
 ## Useful KDE applications
 filelight
