@@ -15,5 +15,5 @@ elif [ $NUM_UPDATES -ge 200 ]; then
     BUTTON_ACTION="$(notify-send --urgency=normal --expire-time=0 --app-name="Software update" --category=network --icon="update-high" --action=UPDATE="Update software" "$NUM_UPDATES updates available" "Your software is extremely out of date and your system is at risk! Please update now for the latest features, optimisations and security fixes.\\n$UPDATE_MESSAGE")"
 fi
 if [ ! -z "$BUTTON_ACTION" ]; then
-    if [ $BUTTON_ACTION == "UPDATE" ]; then pamac-manager --updates; fi
+    if [ $BUTTON_ACTION == "UPDATE" ]; then /usr/lib/pamac-plasma/pamac-update.sh; fi
 fi

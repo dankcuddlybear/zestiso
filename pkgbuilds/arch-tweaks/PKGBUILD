@@ -17,7 +17,7 @@ depends=(
 	mkinitcpio
 	networkmanager
 	pacman
-	rate-mirrors
+	#rate-mirrors
 	sudo
 	systemd
 	terminus-font
